@@ -1,0 +1,378 @@
+{
+  "schemaVersion": "1",
+  "curriculumVersion": "2026-10-07.2",
+  "path": {
+    "id": "agentic-ai-engineering",
+    "title": "Agentic AI Engineering",
+    "summary": "Seven stages. Your pace. Start with evidence and focus on what you need.",
+    "stages": [
+      {
+        "id": "stage-01",
+        "order": 1,
+        "title": "AI Foundations",
+        "summary": "Understand how generative AI works and how to communicate with language models.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "ai-foundations-generative-ai",
+            "stageId": "stage-01",
+            "order": 1,
+            "title": "Generative AI",
+            "description": "Generative tasks, modalities, capabilities and limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "ai-foundations-llms",
+            "stageId": "stage-01",
+            "order": 2,
+            "title": "Large Language Models",
+            "description": "Language-model prediction, training and generation concepts.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "ai-foundations-tokens",
+            "stageId": "stage-01",
+            "order": 3,
+            "title": "Tokens",
+            "description": "Tokenization, counting and usage budgets.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "ai-foundations-context-windows",
+            "stageId": "stage-01",
+            "order": 4,
+            "title": "Context Windows",
+            "description": "Request budgets, history and long-context limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "ai-foundations-prompting",
+            "stageId": "stage-01",
+            "order": 5,
+            "title": "Prompting",
+            "description": "Clear instructions, context, examples and evaluation.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "ai-foundations-structured-outputs",
+            "stageId": "stage-01",
+            "order": 6,
+            "title": "Structured Outputs",
+            "description": "Schemas, validation and semantic correctness.",
+            "lessonStatus": "planned"
+          }
+        ]
+      },
+      {
+        "id": "stage-02",
+        "order": 2,
+        "title": "Building with AI",
+        "summary": "Build a foundation for integrating AI into software.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "stage-02-python",
+            "stageId": "stage-02",
+            "order": 1,
+            "title": "Python Fundamentals",
+            "description": "Learn python fundamentals through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-02-vibe-coding",
+            "stageId": "stage-02",
+            "order": 2,
+            "title": "Vibe Coding",
+            "description": "Learn vibe coding through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-02-llm-apis",
+            "stageId": "stage-02",
+            "order": 3,
+            "title": "LLM APIs",
+            "description": "Learn llm apis through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-02-api-integration",
+            "stageId": "stage-02",
+            "order": 4,
+            "title": "API Integration",
+            "description": "Learn api integration through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-02-function-calling",
+            "stageId": "stage-02",
+            "order": 5,
+            "title": "Function Calling",
+            "description": "Learn function calling through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          }
+        ]
+      },
+      {
+        "id": "stage-03",
+        "order": 3,
+        "title": "Knowledge & Retrieval (RAG)",
+        "summary": "Explore how AI systems retrieve and use external knowledge.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "stage-03-embeddings",
+            "stageId": "stage-03",
+            "order": 1,
+            "title": "Embeddings",
+            "description": "Learn embeddings through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-03-chunking",
+            "stageId": "stage-03",
+            "order": 2,
+            "title": "Chunking",
+            "description": "Learn chunking through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-03-vector-databases",
+            "stageId": "stage-03",
+            "order": 3,
+            "title": "Vector Databases",
+            "description": "Learn vector databases through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-03-rag-architecture",
+            "stageId": "stage-03",
+            "order": 4,
+            "title": "RAG Architecture",
+            "description": "Learn rag architecture through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-03-retrieval-strategies",
+            "stageId": "stage-03",
+            "order": 5,
+            "title": "Retrieval Strategies",
+            "description": "Learn retrieval strategies through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          }
+        ]
+      },
+      {
+        "id": "stage-04",
+        "order": 4,
+        "title": "Agent Engineering",
+        "summary": "Understand tools, workflows and agent architectures.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "stage-04-agents",
+            "stageId": "stage-04",
+            "order": 1,
+            "title": "Agents",
+            "description": "Learn agents through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-04-tool-calling",
+            "stageId": "stage-04",
+            "order": 2,
+            "title": "Tool Calling",
+            "description": "Learn tool calling through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-04-mcp",
+            "stageId": "stage-04",
+            "order": 3,
+            "title": "Model Context Protocol (MCP)",
+            "description": "Learn model context protocol (mcp) through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-04-langchain",
+            "stageId": "stage-04",
+            "order": 4,
+            "title": "LangChain",
+            "description": "Learn langchain through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-04-langgraph",
+            "stageId": "stage-04",
+            "order": 5,
+            "title": "LangGraph",
+            "description": "Learn langgraph through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-04-workflows",
+            "stageId": "stage-04",
+            "order": 6,
+            "title": "Workflows",
+            "description": "Learn workflows through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-04-a2a",
+            "stageId": "stage-04",
+            "order": 7,
+            "title": "Agent-to-Agent (A2A)",
+            "description": "Learn agent-to-agent (a2a) through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          }
+        ]
+      },
+      {
+        "id": "stage-05",
+        "order": 5,
+        "title": "Advanced AI Systems",
+        "summary": "Explore adaptations and architectures for advanced AI systems.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "stage-05-multi-agent",
+            "stageId": "stage-05",
+            "order": 1,
+            "title": "Multi-Agent Systems",
+            "description": "Learn multi-agent systems through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-05-fine-tuning",
+            "stageId": "stage-05",
+            "order": 2,
+            "title": "Fine-Tuning",
+            "description": "Learn fine-tuning through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-05-lora",
+            "stageId": "stage-05",
+            "order": 3,
+            "title": "LoRA",
+            "description": "Learn lora through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-05-qlora",
+            "stageId": "stage-05",
+            "order": 4,
+            "title": "QLoRA",
+            "description": "Learn qlora through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-05-local-models",
+            "stageId": "stage-05",
+            "order": 5,
+            "title": "Local Models",
+            "description": "Learn local models through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          }
+        ]
+      },
+      {
+        "id": "stage-06",
+        "order": 6,
+        "title": "Production AI Engineering",
+        "summary": "Prepare reliable AI applications for real-world use.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "stage-06-evaluations",
+            "stageId": "stage-06",
+            "order": 1,
+            "title": "Evaluations",
+            "description": "Learn evaluations through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-06-observability",
+            "stageId": "stage-06",
+            "order": 2,
+            "title": "Observability",
+            "description": "Learn observability through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-06-tracing",
+            "stageId": "stage-06",
+            "order": 3,
+            "title": "Tracing",
+            "description": "Learn tracing through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-06-guardrails",
+            "stageId": "stage-06",
+            "order": 4,
+            "title": "Guardrails",
+            "description": "Learn guardrails through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-06-prompt-injection",
+            "stageId": "stage-06",
+            "order": 5,
+            "title": "Prompt Injection",
+            "description": "Learn prompt injection through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-06-security",
+            "stageId": "stage-06",
+            "order": 6,
+            "title": "Security",
+            "description": "Learn security through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          }
+        ]
+      },
+      {
+        "id": "stage-07",
+        "order": 7,
+        "title": "Interview & Career Readiness",
+        "summary": "Connect technical understanding with architecture and career conversations.",
+        "diagnosticStatus": "planned",
+        "topics": [
+          {
+            "id": "stage-07-architecture",
+            "stageId": "stage-07",
+            "order": 1,
+            "title": "Architecture Scenarios",
+            "description": "Learn architecture scenarios through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-07-technical-questions",
+            "stageId": "stage-07",
+            "order": 2,
+            "title": "Technical Questions",
+            "description": "Learn technical questions through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-07-coding-concepts",
+            "stageId": "stage-07",
+            "order": 3,
+            "title": "Coding Concepts",
+            "description": "Learn coding concepts through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          },
+          {
+            "id": "stage-07-interview-practice",
+            "stageId": "stage-07",
+            "order": 4,
+            "title": "Interview Practice",
+            "description": "Learn interview practice through concrete decisions, examples and explicit limitations.",
+            "lessonStatus": "planned"
+          }
+        ]
+      }
+    ]
+  }
+}

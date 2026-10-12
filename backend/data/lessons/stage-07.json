@@ -1,0 +1,574 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-08.1",
+  "lessons": [
+    {
+      "id": "stage-07-architecture-lesson",
+      "stageId": "stage-07",
+      "topicId": "stage-07-architecture",
+      "title": "Architecture Scenarios",
+      "summary": "Understand architecture scenarios by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-07-architecture.1",
+        "stage-07-architecture.2",
+        "stage-07-architecture.3",
+        "stage-07-architecture.4",
+        "stage-07-architecture.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Requirements",
+          "conceptIds": [
+            "stage-07-architecture.1"
+          ],
+          "paragraphs": [
+            "Functional requirement: States what behavior the system must provide.",
+            "Quality requirement: States measurable properties such as latency or reliability.",
+            "Constraint: Limits permitted design choices.",
+            "Acceptance criterion: Defines observable evidence that a requirement is met."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Component boundaries",
+          "conceptIds": [
+            "stage-07-architecture.2"
+          ],
+          "paragraphs": [
+            "API boundary: Defines validated requests and responses between callers and services.",
+            "Persistence boundary: Owns durable data and migration behavior.",
+            "Inference boundary: Owns model execution and its limits.",
+            "Presentation boundary: Owns readable interaction and accessible display."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Architecture decisions",
+          "conceptIds": [
+            "stage-07-architecture.3"
+          ],
+          "paragraphs": [
+            "Tradeoff analysis: Compare benefits and costs under stated requirements.",
+            "Assumption record: Make unverified premises explicit.",
+            "Baseline: Establish the simplest workable comparison.",
+            "Evidence: Use measured results to justify a decision."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Reliability design",
+          "conceptIds": [
+            "stage-07-architecture.4"
+          ],
+          "paragraphs": [
+            "Timeout: Bound waiting for one operation.",
+            "Retry policy: Repeat only eligible work under bounded conditions.",
+            "Idempotency: Prevent duplicated logical effects.",
+            "Fallback: Offer a supported alternative when the primary path fails."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Security and operations",
+          "conceptIds": [
+            "stage-07-architecture.5"
+          ],
+          "paragraphs": [
+            "Threat boundary: Separates trust levels and limits authority.",
+            "Telemetry: Provides evidence of actual operational behavior.",
+            "Release gate: Requires defined checks before rollout.",
+            "Recovery plan: Defines restoration or rollback after failure."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Requirements: a worked decision",
+          "scenario": "The system must retrieve a learner's saved assessment. What requirement type fits?",
+          "walkthrough": "Choose Functional requirement. States what behavior the system must provide.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Component boundaries: a worked decision",
+          "scenario": "Validate incoming scoring submissions?",
+          "walkthrough": "Choose API boundary. Defines validated requests and responses between callers and services.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Architecture decisions: a worked decision",
+          "scenario": "Compare local serving cost with hosted maintenance burden?",
+          "walkthrough": "Choose Tradeoff analysis. Compare benefits and costs under stated requirements.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Reliability design: a worked decision",
+          "scenario": "A provider request never completes. What control fits?",
+          "walkthrough": "Choose Timeout. Bound waiting for one operation.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Security and operations: a worked decision",
+          "scenario": "Retrieved text must not authorize privileged actions. What boundary fits?",
+          "walkthrough": "Choose Threat boundary. Separates trust levels and limits authority.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Requirements: distinguish Functional requirement, Quality requirement, Constraint, Acceptance criterion.",
+        "Component boundaries: distinguish API boundary, Persistence boundary, Inference boundary, Presentation boundary.",
+        "Architecture decisions: distinguish Tradeoff analysis, Assumption record, Baseline, Evidence.",
+        "Reliability design: distinguish Timeout, Retry policy, Idempotency, Fallback.",
+        "Security and operations: distinguish Threat boundary, Telemetry, Release gate, Recovery plan."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Architecture Scenarios: primary documentation",
+          "url": "https://learn.microsoft.com/en-us/azure/well-architected/pillars"
+        }
+      ]
+    },
+    {
+      "id": "stage-07-technical-questions-lesson",
+      "stageId": "stage-07",
+      "topicId": "stage-07-technical-questions",
+      "title": "Technical Questions",
+      "summary": "Understand technical questions by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-07-technical-questions.1",
+        "stage-07-technical-questions.2",
+        "stage-07-technical-questions.3",
+        "stage-07-technical-questions.4",
+        "stage-07-technical-questions.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Model concepts",
+          "conceptIds": [
+            "stage-07-technical-questions.1"
+          ],
+          "paragraphs": [
+            "Token: A tokenizer-defined unit is not universally one word.",
+            "Context: The model request has bounded input/output capacity under its contract.",
+            "Embedding: A representation supports similarity comparisons rather than guarantees truth.",
+            "Structured output: A format contract still needs semantic validation."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Retrieval concepts",
+          "conceptIds": [
+            "stage-07-technical-questions.2"
+          ],
+          "paragraphs": [
+            "Chunk: A retrievable unit derived from source content.",
+            "Index: A searchable organization of records.",
+            "Reranker: Reorders a candidate set for relevance.",
+            "Citation: Connects an answer claim with its source."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Agent concepts",
+          "conceptIds": [
+            "stage-07-technical-questions.3"
+          ],
+          "paragraphs": [
+            "Workflow: Code determines a known execution path.",
+            "Agent: A model selects actions within enforced constraints.",
+            "Tool call: A request to a capability still needs host validation and execution.",
+            "Observation: Actual feedback informs later decisions."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Adaptation concepts",
+          "conceptIds": [
+            "stage-07-technical-questions.4"
+          ],
+          "paragraphs": [
+            "Prompting: Changes instructions without training weights.",
+            "Fine-tuning: Updates learned parameters using an objective.",
+            "LoRA: Uses trainable low-rank updates on a compatible base.",
+            "Quantization: Uses lower-precision representation with measured tradeoffs."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Evidence in answers",
+          "conceptIds": [
+            "stage-07-technical-questions.5"
+          ],
+          "paragraphs": [
+            "Definition: States what a concept means precisely.",
+            "Example: Demonstrates the concept in a concrete case.",
+            "Tradeoff: Explains benefits and costs under constraints.",
+            "Limitation: States where a claim or approach does not apply."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Model concepts: a worked decision",
+          "scenario": "Explain why six words do not necessarily equal six model units?",
+          "walkthrough": "Choose Token. A tokenizer-defined unit is not universally one word.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Retrieval concepts: a worked decision",
+          "scenario": "Identify a passage created during document splitting?",
+          "walkthrough": "Choose Chunk. A retrievable unit derived from source content.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Agent concepts: a worked decision",
+          "scenario": "Describe a fixed classify-and-route process?",
+          "walkthrough": "Choose Workflow. Code determines a known execution path.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Adaptation concepts: a worked decision",
+          "scenario": "Modify response style through request instructions?",
+          "walkthrough": "Choose Prompting. Changes instructions without training weights.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Evidence in answers: a worked decision",
+          "scenario": "Start by explaining what idempotency means?",
+          "walkthrough": "Choose Definition. States what a concept means precisely.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Model concepts: distinguish Token, Context, Embedding, Structured output.",
+        "Retrieval concepts: distinguish Chunk, Index, Reranker, Citation.",
+        "Agent concepts: distinguish Workflow, Agent, Tool call, Observation.",
+        "Adaptation concepts: distinguish Prompting, Fine-tuning, LoRA, Quantization.",
+        "Evidence in answers: distinguish Definition, Example, Tradeoff, Limitation."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Technical Questions: Model concepts",
+          "url": "https://platform.openai.com/docs/guides/text-generation"
+        },
+        {
+          "id": "primary-2",
+          "title": "Technical Questions: Retrieval concepts",
+          "url": "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview"
+        },
+        {
+          "id": "primary-3",
+          "title": "Technical Questions: Agent concepts",
+          "url": "https://www.anthropic.com/engineering/building-effective-agents"
+        },
+        {
+          "id": "primary-4",
+          "title": "Technical Questions: Adaptation concepts",
+          "url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora"
+        },
+        {
+          "id": "primary-5",
+          "title": "Technical Questions: Evidence in answers",
+          "url": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing.html"
+        }
+      ]
+    },
+    {
+      "id": "stage-07-coding-concepts-lesson",
+      "stageId": "stage-07",
+      "topicId": "stage-07-coding-concepts",
+      "title": "Coding Concepts",
+      "summary": "Understand coding concepts by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-07-coding-concepts.1",
+        "stage-07-coding-concepts.2",
+        "stage-07-coding-concepts.3",
+        "stage-07-coding-concepts.4",
+        "stage-07-coding-concepts.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Complexity",
+          "conceptIds": [
+            "stage-07-coding-concepts.1"
+          ],
+          "paragraphs": [
+            "Constant time: Work does not grow with input size under the stated operation model.",
+            "Linear time: Work grows proportionally with input size.",
+            "Quadratic time: Work grows with the square of input size.",
+            "Logarithmic time: Work grows with repeated proportional reduction of the search space."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Collections",
+          "conceptIds": [
+            "stage-07-coding-concepts.2"
+          ],
+          "paragraphs": [
+            "Dictionary: Maps keys to values.",
+            "Set: Stores unique elements for membership and set operations.",
+            "Queue: Processes elements in first-in-first-out order.",
+            "Stack: Processes elements in last-in-first-out order."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Function design",
+          "conceptIds": [
+            "stage-07-coding-concepts.3"
+          ],
+          "paragraphs": [
+            "Pure computation: Returns a result without intended external effects for the same explicit inputs.",
+            "Validation: Rejects inputs that violate the contract.",
+            "Side effect: Changes external state such as storage or a network service.",
+            "Error propagation: Makes failure visible to the caller."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Concurrency concepts",
+          "conceptIds": [
+            "stage-07-coding-concepts.4"
+          ],
+          "paragraphs": [
+            "Race condition: Outcome depends on uncontrolled ordering of competing operations.",
+            "Atomic operation: An operation is indivisible under its defined concurrency model.",
+            "Mutual exclusion: Restricts concurrent access to a protected critical section.",
+            "Idempotency: Repeated logical execution has no additional intended effect."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Testing",
+          "conceptIds": [
+            "stage-07-coding-concepts.5"
+          ],
+          "paragraphs": [
+            "Boundary case: Exercises limits such as zero, empty or maximum-size inputs.",
+            "Regression case: Retains a previously failing scenario after it is fixed.",
+            "Integration case: Exercises interactions between components.",
+            "Property check: Verifies a general invariant over multiple inputs."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Complexity: a worked decision",
+          "scenario": "Read a known array element by index under the usual array model?",
+          "walkthrough": "Choose Constant time. Work does not grow with input size under the stated operation model.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Collections: a worked decision",
+          "scenario": "Associate a request ID with its result?",
+          "walkthrough": "Choose Dictionary. Maps keys to values.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Function design: a worked decision",
+          "scenario": "Calculate a rounded percentage from two inputs without saving?",
+          "walkthrough": "Choose Pure computation. Returns a result without intended external effects for the same explicit inputs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Concurrency concepts: a worked decision",
+          "scenario": "Two tabs overwrite progress in order-dependent ways?",
+          "walkthrough": "Choose Race condition. Outcome depends on uncontrolled ordering of competing operations.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Testing: a worked decision",
+          "scenario": "Verify percentages when the total is zero?",
+          "walkthrough": "Choose Boundary case. Exercises limits such as zero, empty or maximum-size inputs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Complexity: distinguish Constant time, Linear time, Quadratic time, Logarithmic time.",
+        "Collections: distinguish Dictionary, Set, Queue, Stack.",
+        "Function design: distinguish Pure computation, Validation, Side effect, Error propagation.",
+        "Concurrency concepts: distinguish Race condition, Atomic operation, Mutual exclusion, Idempotency.",
+        "Testing: distinguish Boundary case, Regression case, Integration case, Property check."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Coding Concepts: primary documentation",
+          "url": "https://docs.python.org/3/tutorial/"
+        }
+      ]
+    },
+    {
+      "id": "stage-07-interview-practice-lesson",
+      "stageId": "stage-07",
+      "topicId": "stage-07-interview-practice",
+      "title": "Interview Practice",
+      "summary": "Understand interview practice by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-07-interview-practice.1",
+        "stage-07-interview-practice.2",
+        "stage-07-interview-practice.3",
+        "stage-07-interview-practice.4",
+        "stage-07-interview-practice.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Clarification",
+          "conceptIds": [
+            "stage-07-interview-practice.1"
+          ],
+          "paragraphs": [
+            "Goal: Identify the outcome the interviewer wants designed or explained.",
+            "Constraint: Identify limits such as privacy, hardware or deployment rules.",
+            "Scale: Identify workload size and concurrency assumptions.",
+            "Success measure: Define measurable evidence that the design works."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Answer structure",
+          "conceptIds": [
+            "stage-07-interview-practice.2"
+          ],
+          "paragraphs": [
+            "Definition: Explain a concept's meaning before using it.",
+            "Concrete example: Demonstrate behavior in a specific scenario.",
+            "Tradeoff: Compare consequences of alternatives.",
+            "Qualification: State assumptions and limits without unsupported certainty."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Scenario reasoning",
+          "conceptIds": [
+            "stage-07-interview-practice.3"
+          ],
+          "paragraphs": [
+            "Evidence gathering: Obtain facts before drawing conclusions.",
+            "Failure isolation: Locate the component where behavior diverges from the contract.",
+            "Alternative comparison: Evaluate feasible options against requirements.",
+            "Decision rationale: Explain why a chosen option fits stated constraints."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Coding discussion",
+          "conceptIds": [
+            "stage-07-interview-practice.4"
+          ],
+          "paragraphs": [
+            "Input contract: State expected values and permitted shapes.",
+            "Algorithm: Describe the steps used to compute the result.",
+            "Complexity: Explain how resource requirements scale.",
+            "Verification: Demonstrate cases and invariants supporting correctness."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Readiness claims",
+          "conceptIds": [
+            "stage-07-interview-practice.5"
+          ],
+          "paragraphs": [
+            "Knowledge evidence: Quiz results demonstrate performance on sampled conceptual questions.",
+            "Practice feedback: Feedback helps improve explanation but is not a hiring decision.",
+            "Professional experience: Actual applied work supports claims about execution experience.",
+            "Honest uncertainty: State missing knowledge rather than invent facts or experience."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Clarification: a worked decision",
+          "scenario": "Ask what user problem the system should solve?",
+          "walkthrough": "Choose Goal. Identify the outcome the interviewer wants designed or explained.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Answer structure: a worked decision",
+          "scenario": "Start by defining retrieval augmentation?",
+          "walkthrough": "Choose Definition. Explain a concept's meaning before using it.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Scenario reasoning: a worked decision",
+          "scenario": "Ask for logs and reproduction steps before proposing a fix?",
+          "walkthrough": "Choose Evidence gathering. Obtain facts before drawing conclusions.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Coding discussion: a worked decision",
+          "scenario": "Specify whether empty input is allowed before coding?",
+          "walkthrough": "Choose Input contract. State expected values and permitted shapes.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Readiness claims: a worked decision",
+          "scenario": "A strong concept quiz result provides what kind of evidence?",
+          "walkthrough": "Choose Knowledge evidence. Quiz results demonstrate performance on sampled conceptual questions.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Clarification: distinguish Goal, Constraint, Scale, Success measure.",
+        "Answer structure: distinguish Definition, Concrete example, Tradeoff, Qualification.",
+        "Scenario reasoning: distinguish Evidence gathering, Failure isolation, Alternative comparison, Decision rationale.",
+        "Coding discussion: distinguish Input contract, Algorithm, Complexity, Verification.",
+        "Readiness claims: distinguish Knowledge evidence, Practice feedback, Professional experience, Honest uncertainty."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Interview Practice: primary documentation",
+          "url": "https://careers.microsoft.com/v2/global/en/hiring-tips/technical-interviewing.html"
+        }
+      ]
+    }
+  ]
+}

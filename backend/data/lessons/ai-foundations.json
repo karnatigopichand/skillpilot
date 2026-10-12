@@ -1,0 +1,562 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-07.1",
+  "lessons": [
+    {
+      "id": "lesson-ai-foundations-generative-ai",
+      "stageId": "stage-01",
+      "topicId": "ai-foundations-generative-ai",
+      "title": "Generative AI",
+      "summary": "Generative tasks, modalities, capabilities and limitations.",
+      "status": "published",
+      "conceptIds": [
+        "generative-ai.task-types",
+        "generative-ai.distribution",
+        "generative-ai.modalities",
+        "generative-ai.training-inference",
+        "generative-ai.reliability"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Choose the task",
+          "conceptIds": [
+            "generative-ai.task-types"
+          ],
+          "paragraphs": [
+            "Generation produces new content; classification assigns a label to existing content. A product can combine both. Decide what the user needs before choosing a model."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Patterns, not a fact database",
+          "conceptIds": [
+            "generative-ai.distribution"
+          ],
+          "paragraphs": [
+            "A generative model learns patterns in its training data. Its output reflects those patterns and the supplied input; a plausible result is not evidence that a claim is true."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Different modalities",
+          "conceptIds": [
+            "generative-ai.modalities"
+          ],
+          "paragraphs": [
+            "Text, images, audio and video are different forms of information. A multimodal system may accept or produce several forms; check the actual model interface rather than assuming every model supports each form."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Training and use",
+          "conceptIds": [
+            "generative-ai.training-inference"
+          ],
+          "paragraphs": [
+            "Training changes model parameters using data. Inference uses those parameters to produce output. Adding an instruction to a request usually changes its context, not the underlying trained parameters."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Build a verification step",
+          "conceptIds": [
+            "generative-ai.reliability"
+          ],
+          "paragraphs": [
+            "Use generation for drafts and candidates. Check important claims against authoritative evidence, and use human review when errors have substantial consequences."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Draft a product description",
+          "scenario": "A store needs a first draft for a new backpack.",
+          "walkthrough": "Supply verified product specifications, ask for a short draft, then compare every product claim with the specification. Remove invented features before publication.",
+          "takeaway": "Creative wording and factual verification are separate responsibilities."
+        }
+      ],
+      "misconceptions": [
+        "Fluent output is not proof of truth.",
+        "A multimodal label does not guarantee every input or output type."
+      ],
+      "recap": [
+        "Generation produces new content; classification assigns a label to existing content. A product can combine both. Decide what the user needs before choosing a model.",
+        "Use generation for drafts and candidates. Check important claims against authoritative evidence, and use human review when errors have substantial consequences."
+      ],
+      "resources": [
+        {
+          "id": "resource-1",
+          "title": "Google: Introduction to language models",
+          "url": "https://developers.google.com/machine-learning/crash-course/llm"
+        }
+      ]
+    },
+    {
+      "id": "lesson-ai-foundations-llms",
+      "stageId": "stage-01",
+      "topicId": "ai-foundations-llms",
+      "title": "Large Language Models",
+      "summary": "Language-model prediction, training and generation concepts.",
+      "status": "published",
+      "conceptIds": [
+        "llms.prediction",
+        "llms.training-inference",
+        "llms.instruction-tuning",
+        "llms.sampling",
+        "llms.knowledge-limits"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Predicting a continuation",
+          "conceptIds": [
+            "llms.prediction"
+          ],
+          "paragraphs": [
+            "An autoregressive language model estimates possible next tokens using the current context. Repeating this process creates a response. Prediction can support useful reasoning, but does not itself guarantee factual accuracy."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Parameters and requests",
+          "conceptIds": [
+            "llms.training-inference"
+          ],
+          "paragraphs": [
+            "Training updates parameters; inference applies a trained model to a request. Conversation text supplies temporary context. It is not the same operation as training the model on new data."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Instruction tuning",
+          "conceptIds": [
+            "llms.instruction-tuning"
+          ],
+          "paragraphs": [
+            "Further training on instruction-response examples can improve instruction following. It changes learned behavior; a prompt only supplies instructions for the current interaction. Neither removes the need to check output."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Choosing among candidates",
+          "conceptIds": [
+            "llms.sampling"
+          ],
+          "paragraphs": [
+            "Decoding selects tokens from predicted candidates. Sampling introduces variability; choosing likely tokens can make output more consistent. More variation does not imply better answers, and lower variation does not prove correctness."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Knowledge has boundaries",
+          "conceptIds": [
+            "llms.knowledge-limits"
+          ],
+          "paragraphs": [
+            "A fluent answer can include unsupported claims. For current or private information, supply reliable context and verify the result. A model does not automatically know your files or every recent event."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Answer a policy question",
+          "scenario": "An employee asks whether a new policy allows remote work.",
+          "walkthrough": "Provide the current approved policy as context. Ask for an answer grounded in that policy, then check the cited passage. If the document does not resolve the question, escalate instead of accepting a confident guess.",
+          "takeaway": "Useful language generation still needs current evidence."
+        }
+      ],
+      "misconceptions": [
+        "Prompting does not normally retrain model parameters.",
+        "Consistent output can still be consistently wrong."
+      ],
+      "recap": [
+        "An autoregressive language model estimates possible next tokens using the current context. Repeating this process creates a response. Prediction can support useful reasoning, but does not itself guarantee factual accuracy.",
+        "A fluent answer can include unsupported claims. For current or private information, supply reliable context and verify the result. A model does not automatically know your files or every recent event."
+      ],
+      "resources": [
+        {
+          "id": "resource-1",
+          "title": "Google: Introduction to language models",
+          "url": "https://developers.google.com/machine-learning/crash-course/llm"
+        },
+        {
+          "id": "resource-2",
+          "title": "Google: What is a large language model?",
+          "url": "https://developers.google.com/machine-learning/crash-course/llm/transformers"
+        }
+      ]
+    },
+    {
+      "id": "lesson-ai-foundations-tokens",
+      "stageId": "stage-01",
+      "topicId": "ai-foundations-tokens",
+      "title": "Tokens",
+      "summary": "Tokenization, counting and usage budgets.",
+      "status": "published",
+      "conceptIds": [
+        "tokens.segmentation",
+        "tokens.counting",
+        "tokens.language-variation",
+        "tokens.usage-budgets",
+        "tokens.text-composition"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Pieces of text",
+          "conceptIds": [
+            "tokens.segmentation"
+          ],
+          "paragraphs": [
+            "Tokenizers encode text as token IDs. Pieces may be whole words, parts of words, punctuation or other units. Token boundaries depend on the tokenizer, so words and tokens are different counts."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Count with the right tool",
+          "conceptIds": [
+            "tokens.counting"
+          ],
+          "paragraphs": [
+            "Use the tokenizer or usage information for the actual model. Character-based estimates can help rough planning but are not exact counts. Include instructions and other request content, not only the user message."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Languages differ",
+          "conceptIds": [
+            "tokens.language-variation"
+          ],
+          "paragraphs": [
+            "Equal character counts in different languages need not produce equal token counts. A tokenizer\u2019s vocabulary and segmentation affect the result; measure representative text instead of applying one universal conversion."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Budget input and output",
+          "conceptIds": [
+            "tokens.usage-budgets"
+          ],
+          "paragraphs": [
+            "Input and generated output both matter when planning capacity. Leave room for the response. Billing and context accounting are provider-specific, so use the applicable documentation and reported usage."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Formatting is content",
+          "conceptIds": [
+            "tokens.text-composition"
+          ],
+          "paragraphs": [
+            "Whitespace, punctuation, code and special strings can change tokenization. Removing formatting may reduce size but damage meaning. Optimize by measuring and preserving information the task needs."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Fit a support request",
+          "scenario": "A support workflow includes instructions, a transcript and an answer.",
+          "walkthrough": "For a hypothetical 4,000-token combined budget, allocate 500 to instructions, 2,500 to transcript and 1,000 to the response. Measure with the actual tokenizer; shorten irrelevant transcript material if needed. This is an illustration, not a model limit.",
+          "takeaway": "Budget the complete request and response, using measured counts."
+        }
+      ],
+      "misconceptions": [
+        "One word is not always one token.",
+        "A character estimate is not a measured token count."
+      ],
+      "recap": [
+        "Tokenizers encode text as token IDs. Pieces may be whole words, parts of words, punctuation or other units. Token boundaries depend on the tokenizer, so words and tokens are different counts.",
+        "Whitespace, punctuation, code and special strings can change tokenization. Removing formatting may reduce size but damage meaning. Optimize by measuring and preserving information the task needs."
+      ],
+      "resources": [
+        {
+          "id": "resource-1",
+          "title": "Hugging Face: Tokenization algorithms",
+          "url": "https://huggingface.co/docs/transformers/tokenizer_summary"
+        }
+      ]
+    },
+    {
+      "id": "lesson-ai-foundations-context-windows",
+      "stageId": "stage-01",
+      "topicId": "ai-foundations-context-windows",
+      "title": "Context Windows",
+      "summary": "Request budgets, history and long-context limitations.",
+      "status": "published",
+      "conceptIds": [
+        "context-windows.budgeting",
+        "context-windows.history",
+        "context-windows.compaction",
+        "context-windows.memory-boundaries",
+        "context-windows.long-context-limits"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Plan the request budget",
+          "conceptIds": [
+            "context-windows.budgeting"
+          ],
+          "paragraphs": [
+            "The context window limits information processed in a request. Account for instructions, conversation, retrieved material and a response allowance. Model and API limits vary; a large advertised window is not a promise of perfect recall."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "History must be supplied",
+          "conceptIds": [
+            "context-windows.history"
+          ],
+          "paragraphs": [
+            "Conversation history is useful only when the system retains and supplies it. Applications decide what to include. A previous exchange omitted from the request cannot be assumed to remain available to the model."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Compact deliberately",
+          "conceptIds": [
+            "context-windows.compaction"
+          ],
+          "paragraphs": [
+            "Summaries save space but can lose details. Preserve decisions, constraints and identifiers; keep original evidence available for retrieval. Evaluate whether the summary still supports the task before discarding source context."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Context is not permanent memory",
+          "conceptIds": [
+            "context-windows.memory-boundaries"
+          ],
+          "paragraphs": [
+            "Request context is distinct from trained parameters and application storage. Durable memory requires an explicit storage-and-retrieval mechanism. Do not promise that simply mentioning something creates permanent recall."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "More is not always better",
+          "conceptIds": [
+            "context-windows.long-context-limits"
+          ],
+          "paragraphs": [
+            "Extra context can add irrelevant material and distract from the task. Select useful evidence, organize it clearly and test representative requests. Staying inside the window is necessary, but not sufficient, for a good answer."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Continue a long project",
+          "scenario": "A conversation has grown too large to resend in full.",
+          "walkthrough": "Keep a compact summary of decisions and open issues, retrieve the relevant original design details, and send both with the new task. Check that identifiers and constraints survived the summary.",
+          "takeaway": "Compaction trades space for possible information loss."
+        }
+      ],
+      "misconceptions": [
+        "A large context window is not durable memory.",
+        "Including more text does not guarantee better attention to important details."
+      ],
+      "recap": [
+        "The context window limits information processed in a request. Account for instructions, conversation, retrieved material and a response allowance. Model and API limits vary; a large advertised window is not a promise of perfect recall.",
+        "Extra context can add irrelevant material and distract from the task. Select useful evidence, organize it clearly and test representative requests. Staying inside the window is necessary, but not sufficient, for a good answer."
+      ],
+      "resources": [
+        {
+          "id": "resource-1",
+          "title": "Anthropic: Effective context engineering",
+          "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+        }
+      ]
+    },
+    {
+      "id": "lesson-ai-foundations-prompting",
+      "stageId": "stage-01",
+      "topicId": "ai-foundations-prompting",
+      "title": "Prompting",
+      "summary": "Clear instructions, context, examples and evaluation.",
+      "status": "published",
+      "conceptIds": [
+        "prompting.instructions",
+        "prompting.examples",
+        "prompting.context-selection",
+        "prompting.constraints",
+        "prompting.evaluation"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "State the task",
+          "conceptIds": [
+            "prompting.instructions"
+          ],
+          "paragraphs": [
+            "Specify the requested outcome, audience and success criteria. Concrete instructions reduce ambiguity. A prompt is a request whose output still needs evaluation; it is not a guarantee of compliance."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Show representative examples",
+          "conceptIds": [
+            "prompting.examples"
+          ],
+          "paragraphs": [
+            "Examples demonstrate expected patterns. Include varied cases rather than repeated easy cases. Keep examples consistent with your written instructions and reserve separate cases to test generalization."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Choose relevant context",
+          "conceptIds": [
+            "prompting.context-selection"
+          ],
+          "paragraphs": [
+            "Provide the facts needed for the task and identify their source. Separate reference material from instructions. Treat text from untrusted documents as data, not as authority to change the task."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Make constraints explicit",
+          "conceptIds": [
+            "prompting.constraints"
+          ],
+          "paragraphs": [
+            "Specify length, format and handling of missing information. Avoid conflicting requirements. For machine-consumed output, prefer an enforceable schema and validation over relying only on prose instructions."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Test the prompt",
+          "conceptIds": [
+            "prompting.evaluation"
+          ],
+          "paragraphs": [
+            "Define a small set of normal, boundary and failure cases. Compare outputs against observable criteria, change one meaningful factor at a time, and keep regression cases. One successful response is weak evidence of reliability."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Extract a meeting action",
+          "scenario": "A team wants an action list from meeting notes.",
+          "walkthrough": "Specify owner, task and deadline fields, show a representative example, and require unavailable deadlines to be marked unknown. Test a note with no deadline and a note with conflicting dates before using the prompt broadly.",
+          "takeaway": "Good instructions include explicit behavior for difficult cases."
+        }
+      ],
+      "misconceptions": [
+        "A prompt that works once is not fully evaluated.",
+        "Reference text should not override trusted instructions."
+      ],
+      "recap": [
+        "Specify the requested outcome, audience and success criteria. Concrete instructions reduce ambiguity. A prompt is a request whose output still needs evaluation; it is not a guarantee of compliance.",
+        "Define a small set of normal, boundary and failure cases. Compare outputs against observable criteria, change one meaningful factor at a time, and keep regression cases. One successful response is weak evidence of reliability."
+      ],
+      "resources": [
+        {
+          "id": "resource-1",
+          "title": "Google: Prompt design strategies",
+          "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies"
+        }
+      ]
+    },
+    {
+      "id": "lesson-ai-foundations-structured-outputs",
+      "stageId": "stage-01",
+      "topicId": "ai-foundations-structured-outputs",
+      "title": "Structured Outputs",
+      "summary": "Schemas, validation and semantic correctness.",
+      "status": "published",
+      "conceptIds": [
+        "structured-outputs.syntax-schema",
+        "structured-outputs.semantic-validation",
+        "structured-outputs.exception-handling",
+        "structured-outputs.missing-fields",
+        "structured-outputs.provider-guarantees"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Syntax and structure",
+          "conceptIds": [
+            "structured-outputs.syntax-schema"
+          ],
+          "paragraphs": [
+            "Valid JSON follows a syntax. A schema adds structural constraints such as property types and required fields. Parsing and schema validation answer different questions, so perform both where needed."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Meaning needs separate checks",
+          "conceptIds": [
+            "structured-outputs.semantic-validation"
+          ],
+          "paragraphs": [
+            "A structurally valid record may contain a false date or an impossible quantity. Validate domain rules and factual evidence separately from shape. Schema conformance does not establish semantic correctness."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Handle failure paths",
+          "conceptIds": [
+            "structured-outputs.exception-handling"
+          ],
+          "paragraphs": [
+            "Requests may fail, be refused or end before completion. Distinguish these outcomes from a usable result. Retry only under an explicit policy and avoid duplicate downstream actions when retrying."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Missing and null differ",
+          "conceptIds": [
+            "structured-outputs.missing-fields"
+          ],
+          "paragraphs": [
+            "A missing property is not the same as a property whose value is null. Define required fields and allowable null values deliberately. When information is unavailable, represent it honestly rather than inventing a value."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Check actual guarantees",
+          "conceptIds": [
+            "structured-outputs.provider-guarantees"
+          ],
+          "paragraphs": [
+            "A provider may constrain output to a supported schema subset, while another mode may only aim for JSON syntax. Verify the current API contract. Keep application validation even when constrained generation is available."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Validate an inventory record",
+          "scenario": "A generated record reports an item count.",
+          "walkthrough": "Parse the JSON, validate count as an integer in the schema, then reject negative values through a domain rule. Treat a missing count as an unresolved input. Do not execute inventory changes until validation succeeds.",
+          "takeaway": "A usable record passes syntax, structure and domain checks."
+        }
+      ],
+      "misconceptions": [
+        "Valid JSON does not mean valid business data.",
+        "Schema validation does not verify factual claims."
+      ],
+      "recap": [
+        "Valid JSON follows a syntax. A schema adds structural constraints such as property types and required fields. Parsing and schema validation answer different questions, so perform both where needed.",
+        "A provider may constrain output to a supported schema subset, while another mode may only aim for JSON syntax. Verify the current API contract. Keep application validation even when constrained generation is available."
+      ],
+      "resources": [
+        {
+          "id": "resource-1",
+          "title": "JSON Schema: Object validation",
+          "url": "https://json-schema.org/understanding-json-schema/reference/object"
+        },
+        {
+          "id": "resource-2",
+          "title": "Google: Structured outputs and supported schemas",
+          "url": "https://ai.google.dev/gemini-api/docs/structured-output"
+        }
+      ]
+    }
+  ]
+}

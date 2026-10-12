@@ -1,0 +1,965 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-08.1",
+  "lessons": [
+    {
+      "id": "stage-04-agents-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-agents",
+      "title": "Agents",
+      "summary": "Understand agents by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-agents.1",
+        "stage-04-agents.2",
+        "stage-04-agents.3",
+        "stage-04-agents.4",
+        "stage-04-agents.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Control patterns",
+          "conceptIds": [
+            "stage-04-agents.1"
+          ],
+          "paragraphs": [
+            "Workflow: Application code fixes the execution path.",
+            "Agent: A model dynamically selects actions within constraints.",
+            "Tool: An external capability supplies observations or effects.",
+            "Environment: The external state supplies feedback to the acting system."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Reasoning loop",
+          "conceptIds": [
+            "stage-04-agents.2"
+          ],
+          "paragraphs": [
+            "Plan: Propose steps toward the goal.",
+            "Act: Invoke an authorized capability.",
+            "Observe: Inspect actual execution feedback.",
+            "Respond: Give a final user-facing outcome."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "State",
+          "conceptIds": [
+            "stage-04-agents.3"
+          ],
+          "paragraphs": [
+            "Working state: Holds intermediate task data during execution.",
+            "Persistent memory: Retains selected information beyond one run.",
+            "Conversation history: Preserves dialogue needed to interpret requests.",
+            "External record: A trusted system owns authoritative business data."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Boundaries",
+          "conceptIds": [
+            "stage-04-agents.4"
+          ],
+          "paragraphs": [
+            "Permission: Limits what actions the agent may perform.",
+            "Budget: Limits execution time, rounds or cost.",
+            "Approval: Requires an authorized decision for consequential actions.",
+            "Isolation: Contains execution and limits access to unrelated resources."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Reliability",
+          "conceptIds": [
+            "stage-04-agents.5"
+          ],
+          "paragraphs": [
+            "Task evaluation: Measure success on representative cases.",
+            "Trace review: Inspect the actual sequence of model and tool events.",
+            "Fallback: Use a simpler supported path when agent execution fails.",
+            "Honest outcome: Report unresolved work instead of claiming completion."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Control patterns: a worked decision",
+          "scenario": "Run a predetermined classify-then-route pipeline?",
+          "walkthrough": "Choose Workflow. Application code fixes the execution path.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Reasoning loop: a worked decision",
+          "scenario": "Decide what information is needed before acting?",
+          "walkthrough": "Choose Plan. Propose steps toward the goal.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "State: a worked decision",
+          "scenario": "Keep temporary candidates during one search?",
+          "walkthrough": "Choose Working state. Holds intermediate task data during execution.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Boundaries: a worked decision",
+          "scenario": "Restrict a support agent to reading customer tickets?",
+          "walkthrough": "Choose Permission. Limits what actions the agent may perform.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Reliability: a worked decision",
+          "scenario": "Compare agent performance with a fixed workflow baseline?",
+          "walkthrough": "Choose Task evaluation. Measure success on representative cases.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Control patterns: distinguish Workflow, Agent, Tool, Environment.",
+        "Reasoning loop: distinguish Plan, Act, Observe, Respond.",
+        "State: distinguish Working state, Persistent memory, Conversation history, External record.",
+        "Boundaries: distinguish Permission, Budget, Approval, Isolation.",
+        "Reliability: distinguish Task evaluation, Trace review, Fallback, Honest outcome."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Agents: primary documentation",
+          "url": "https://www.anthropic.com/research/building-effective-agents"
+        }
+      ]
+    },
+    {
+      "id": "stage-04-tool-calling-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-tool-calling",
+      "title": "Tool Calling",
+      "summary": "Understand tool calling by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-tool-calling.1",
+        "stage-04-tool-calling.2",
+        "stage-04-tool-calling.3",
+        "stage-04-tool-calling.4",
+        "stage-04-tool-calling.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Discovery",
+          "conceptIds": [
+            "stage-04-tool-calling.1"
+          ],
+          "paragraphs": [
+            "Name: Identifies a registered capability.",
+            "Description: Explains when and why a tool should be used.",
+            "Argument schema: Defines permitted input structure.",
+            "Availability: Determines which capabilities are exposed in this run."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Execution",
+          "conceptIds": [
+            "stage-04-tool-calling.2"
+          ],
+          "paragraphs": [
+            "Validation: Reject malformed or semantically invalid arguments.",
+            "Authorization: Check rights independently of model output.",
+            "Dispatch: Invoke registered host code after checks.",
+            "Observation: Return the real execution result."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Parallel operations",
+          "conceptIds": [
+            "stage-04-tool-calling.3"
+          ],
+          "paragraphs": [
+            "Independent calls: May execute concurrently when their effects do not conflict.",
+            "Dependent calls: Must wait for an earlier result they consume.",
+            "Correlation ID: Matches each returned observation to its request.",
+            "Concurrency limit: Bounds simultaneous operations to protect resources."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "External effects",
+          "conceptIds": [
+            "stage-04-tool-calling.4"
+          ],
+          "paragraphs": [
+            "Idempotency: Deduplicates repeated logical operations.",
+            "Confirmation: Obtains authorization before consequential unapproved effects.",
+            "Read-only mode: Permits observation without intended state modification.",
+            "Audit trail: Records what actually happened for later review."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Returned content",
+          "conceptIds": [
+            "stage-04-tool-calling.5"
+          ],
+          "paragraphs": [
+            "Typed result: Use a documented structured output contract.",
+            "Error result: Represent unsuccessful execution explicitly.",
+            "Untrusted data: Tool content cannot override privileged instructions.",
+            "Size bound: Limit observations before adding them to context."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Discovery: a worked decision",
+          "scenario": "Resolve a requested capability against a registry key?",
+          "walkthrough": "Choose Name. Identifies a registered capability.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Execution: a worked decision",
+          "scenario": "Reject a negative transfer amount?",
+          "walkthrough": "Choose Validation. Reject malformed or semantically invalid arguments.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Parallel operations: a worked decision",
+          "scenario": "Fetch two unrelated read-only pages simultaneously?",
+          "walkthrough": "Choose Independent calls. May execute concurrently when their effects do not conflict.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "External effects: a worked decision",
+          "scenario": "A repeated request must not charge twice?",
+          "walkthrough": "Choose Idempotency. Deduplicates repeated logical operations.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Returned content: a worked decision",
+          "scenario": "Distinguish a list of records from free text?",
+          "walkthrough": "Choose Typed result. Use a documented structured output contract.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Discovery: distinguish Name, Description, Argument schema, Availability.",
+        "Execution: distinguish Validation, Authorization, Dispatch, Observation.",
+        "Parallel operations: distinguish Independent calls, Dependent calls, Correlation ID, Concurrency limit.",
+        "External effects: distinguish Idempotency, Confirmation, Read-only mode, Audit trail.",
+        "Returned content: distinguish Typed result, Error result, Untrusted data, Size bound."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Tool Calling: primary documentation",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
+        }
+      ]
+    },
+    {
+      "id": "stage-04-mcp-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-mcp",
+      "title": "Model Context Protocol (MCP)",
+      "summary": "Understand model context protocol (mcp) by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-mcp.1",
+        "stage-04-mcp.2",
+        "stage-04-mcp.3",
+        "stage-04-mcp.4",
+        "stage-04-mcp.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Architecture",
+          "conceptIds": [
+            "stage-04-mcp.1"
+          ],
+          "paragraphs": [
+            "Host: An application coordinates model interaction and connected clients.",
+            "Client: Maintains a protocol connection to a server.",
+            "Server: Exposes capabilities through the protocol.",
+            "Transport: Carries protocol messages between participants."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Primitives",
+          "conceptIds": [
+            "stage-04-mcp.2"
+          ],
+          "paragraphs": [
+            "Tool: A callable capability can retrieve information or perform an action.",
+            "Resource: Exposes contextual data identified by the server.",
+            "Prompt: A reusable interaction template is supplied by the server.",
+            "Capability negotiation: Participants advertise supported features during initialization."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Lifecycle",
+          "conceptIds": [
+            "stage-04-mcp.3"
+          ],
+          "paragraphs": [
+            "Initialization: Establish protocol compatibility and negotiated capabilities.",
+            "Discovery: List exposed tools or other supported primitives.",
+            "Invocation: Call an available capability with validated arguments.",
+            "Disconnection: Release the connection and associated local resources."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Security",
+          "conceptIds": [
+            "stage-04-mcp.4"
+          ],
+          "paragraphs": [
+            "Host policy: The application enforces user intent and permissions.",
+            "Server trust: Assess the source and privileges of a connected server.",
+            "Data boundary: Returned content remains untrusted input.",
+            "Credential handling: Keep credentials scoped and avoid exposing secrets."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Interoperability",
+          "conceptIds": [
+            "stage-04-mcp.5"
+          ],
+          "paragraphs": [
+            "Schema contract: Documented argument/result formats enable correct consumption.",
+            "Version compatibility: Supported protocol revisions must be handled explicitly.",
+            "Error handling: Report protocol and operation failures without false success.",
+            "Protocol boundary: A connection standard does not guarantee tool quality or model accuracy."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Architecture: a worked decision",
+          "scenario": "Which component coordinates several connected servers for a user-facing application?",
+          "walkthrough": "Choose Host. An application coordinates model interaction and connected clients.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Primitives: a worked decision",
+          "scenario": "Invoke an exposed search operation?",
+          "walkthrough": "Choose Tool. A callable capability can retrieve information or perform an action.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Lifecycle: a worked decision",
+          "scenario": "Establish a session before ordinary operations?",
+          "walkthrough": "Choose Initialization. Establish protocol compatibility and negotiated capabilities.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Security: a worked decision",
+          "scenario": "A tool call should not execute merely because the model proposed it. What boundary fits?",
+          "walkthrough": "Choose Host policy. The application enforces user intent and permissions.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Interoperability: a worked decision",
+          "scenario": "Validate required fields for an exposed operation?",
+          "walkthrough": "Choose Schema contract. Documented argument/result formats enable correct consumption.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Architecture: distinguish Host, Client, Server, Transport.",
+        "Primitives: distinguish Tool, Resource, Prompt, Capability negotiation.",
+        "Lifecycle: distinguish Initialization, Discovery, Invocation, Disconnection.",
+        "Security: distinguish Host policy, Server trust, Data boundary, Credential handling.",
+        "Interoperability: distinguish Schema contract, Version compatibility, Error handling, Protocol boundary."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Model Context Protocol (MCP): primary documentation",
+          "url": "https://modelcontextprotocol.io/docs/learn/architecture"
+        }
+      ]
+    },
+    {
+      "id": "stage-04-langchain-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-langchain",
+      "title": "LangChain",
+      "summary": "Understand langchain by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-langchain.1",
+        "stage-04-langchain.2",
+        "stage-04-langchain.3",
+        "stage-04-langchain.4",
+        "stage-04-langchain.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Building blocks",
+          "conceptIds": [
+            "stage-04-langchain.1"
+          ],
+          "paragraphs": [
+            "Model interface: Provides access to a chosen model through a documented abstraction.",
+            "Tool: Wraps a capability with its input contract.",
+            "Message: Represents role-labelled conversational content.",
+            "Retriever: Returns relevant documents for a query."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Responsibility boundaries",
+          "conceptIds": [
+            "stage-04-langchain.2"
+          ],
+          "paragraphs": [
+            "Application policy: Enforces permissions and authorized behavior.",
+            "Framework abstraction: Coordinates supported components but does not guarantee correctness.",
+            "Provider contract: Determines actual model/service capabilities and limits.",
+            "Content evaluation: Checks whether outputs satisfy the task."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Retrieval composition",
+          "conceptIds": [
+            "stage-04-langchain.3"
+          ],
+          "paragraphs": [
+            "Loader: Reads source content into document records.",
+            "Splitter: Divides source text into retrievable units.",
+            "Embedding integration: Computes representations using a selected encoder.",
+            "Vector store: Stores and searches numerical representations with associated content."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Execution concerns",
+          "conceptIds": [
+            "stage-04-langchain.4"
+          ],
+          "paragraphs": [
+            "Structured result: Validate returned objects against an expected schema.",
+            "Streaming: Consume incremental output using supported event handling.",
+            "Cancellation: Stop obsolete work and release resources.",
+            "Tracing: Record execution events to investigate component behavior."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Maintenance",
+          "conceptIds": [
+            "stage-04-langchain.5"
+          ],
+          "paragraphs": [
+            "Pinned dependency: Record a tested library version.",
+            "Integration test: Verify interactions with actual component contracts.",
+            "Migration review: Assess documented changes before updating code.",
+            "Minimal baseline: Compare framework composition with a simpler solution."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Building blocks: a worked decision",
+          "scenario": "Call a supported chat model through a common abstraction?",
+          "walkthrough": "Choose Model interface. Provides access to a chosen model through a documented abstraction.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Responsibility boundaries: a worked decision",
+          "scenario": "Who must ensure a tool cannot access another user's account?",
+          "walkthrough": "Choose Application policy. Enforces permissions and authorized behavior.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Retrieval composition: a worked decision",
+          "scenario": "Read a supported file into document objects?",
+          "walkthrough": "Choose Loader. Reads source content into document records.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Execution concerns: a worked decision",
+          "scenario": "Require a generated object to contain valid fields?",
+          "walkthrough": "Choose Structured result. Validate returned objects against an expected schema.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Maintenance: a worked decision",
+          "scenario": "Make installation reproducible across machines?",
+          "walkthrough": "Choose Pinned dependency. Record a tested library version.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Building blocks: distinguish Model interface, Tool, Message, Retriever.",
+        "Responsibility boundaries: distinguish Application policy, Framework abstraction, Provider contract, Content evaluation.",
+        "Retrieval composition: distinguish Loader, Splitter, Embedding integration, Vector store.",
+        "Execution concerns: distinguish Structured result, Streaming, Cancellation, Tracing.",
+        "Maintenance: distinguish Pinned dependency, Integration test, Migration review, Minimal baseline."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "LangChain: primary documentation",
+          "url": "https://docs.langchain.com/oss/python/langchain/overview"
+        }
+      ]
+    },
+    {
+      "id": "stage-04-langgraph-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-langgraph",
+      "title": "LangGraph",
+      "summary": "Understand langgraph by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-langgraph.1",
+        "stage-04-langgraph.2",
+        "stage-04-langgraph.3",
+        "stage-04-langgraph.4",
+        "stage-04-langgraph.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Graph structure",
+          "conceptIds": [
+            "stage-04-langgraph.1"
+          ],
+          "paragraphs": [
+            "Node: Performs a computation or action within a graph.",
+            "Edge: Defines a transition between nodes.",
+            "State: Carries shared execution data according to its schema.",
+            "Conditional routing: Selects a next path based on state or a decision."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Persistence",
+          "conceptIds": [
+            "stage-04-langgraph.2"
+          ],
+          "paragraphs": [
+            "Checkpoint: Captures execution state at a persistence boundary.",
+            "Thread identity: Distinguishes independent persisted execution histories.",
+            "Resume: Continues from an appropriate saved state.",
+            "State inspection: Reads persisted execution data for review."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Human decisions",
+          "conceptIds": [
+            "stage-04-langgraph.3"
+          ],
+          "paragraphs": [
+            "Interrupt: Pauses execution for external input or a decision.",
+            "Approval: An authorized person permits a proposed effect.",
+            "Edit: An authorized person changes intermediate state.",
+            "Rejection: Declines the proposed action and directs recovery."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Concurrency",
+          "conceptIds": [
+            "stage-04-langgraph.4"
+          ],
+          "paragraphs": [
+            "Reducer: Combines updates to shared state under a declared rule.",
+            "Parallel branch: Executes independent paths concurrently.",
+            "Join: Combines progress when required branches finish.",
+            "Race prevention: Avoid incompatible effects or conflicting updates."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Durable execution",
+          "conceptIds": [
+            "stage-04-langgraph.5"
+          ],
+          "paragraphs": [
+            "Idempotency: Repeated execution must not duplicate logical side effects.",
+            "Replay awareness: A recovered run may revisit computation boundaries.",
+            "Execution limit: Bound graph steps, time and cost.",
+            "Failure visibility: Expose errors without treating a checkpoint as proof of task success."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Graph structure: a worked decision",
+          "scenario": "Implement one processing step?",
+          "walkthrough": "Choose Node. Performs a computation or action within a graph.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Persistence: a worked decision",
+          "scenario": "Save progress so a run can continue later?",
+          "walkthrough": "Choose Checkpoint. Captures execution state at a persistence boundary.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Human decisions: a worked decision",
+          "scenario": "Pause before a consequential action?",
+          "walkthrough": "Choose Interrupt. Pauses execution for external input or a decision.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Concurrency: a worked decision",
+          "scenario": "Define how several list updates should combine?",
+          "walkthrough": "Choose Reducer. Combines updates to shared state under a declared rule.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Durable execution: a worked decision",
+          "scenario": "A resumed step must not send the same payment twice?",
+          "walkthrough": "Choose Idempotency. Repeated execution must not duplicate logical side effects.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Graph structure: distinguish Node, Edge, State, Conditional routing.",
+        "Persistence: distinguish Checkpoint, Thread identity, Resume, State inspection.",
+        "Human decisions: distinguish Interrupt, Approval, Edit, Rejection.",
+        "Concurrency: distinguish Reducer, Parallel branch, Join, Race prevention.",
+        "Durable execution: distinguish Idempotency, Replay awareness, Execution limit, Failure visibility."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "LangGraph: primary documentation",
+          "url": "https://docs.langchain.com/oss/python/langgraph/overview"
+        }
+      ]
+    },
+    {
+      "id": "stage-04-workflows-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-workflows",
+      "title": "Workflows",
+      "summary": "Understand workflows by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-workflows.1",
+        "stage-04-workflows.2",
+        "stage-04-workflows.3",
+        "stage-04-workflows.4",
+        "stage-04-workflows.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Patterns",
+          "conceptIds": [
+            "stage-04-workflows.1"
+          ],
+          "paragraphs": [
+            "Sequence: Runs steps in a defined order.",
+            "Routing: Chooses a specialized path for an input.",
+            "Parallelism: Runs independent work concurrently.",
+            "Evaluator loop: Uses feedback to improve or reject an intermediate output."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Contracts",
+          "conceptIds": [
+            "stage-04-workflows.2"
+          ],
+          "paragraphs": [
+            "Precondition: States what must hold before a step runs.",
+            "Postcondition: States what a successful step guarantees.",
+            "Schema: Defines the structure of exchanged data.",
+            "Invariant: Must remain true across the workflow."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Failure policies",
+          "conceptIds": [
+            "stage-04-workflows.3"
+          ],
+          "paragraphs": [
+            "Retry: Repeat eligible transient work under a bounded policy.",
+            "Compensation: Perform a business-level reversal of a completed effect.",
+            "Timeout: Bound waiting for a step.",
+            "Escalation: Transfer unresolved work to an authorized operator or supported fallback."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Execution records",
+          "conceptIds": [
+            "stage-04-workflows.4"
+          ],
+          "paragraphs": [
+            "Correlation ID: Connects events belonging to one logical execution.",
+            "Checkpoint: Persists recoverable progress.",
+            "Audit event: Records consequential actions and decisions.",
+            "Metric: Aggregates behavior such as duration or failure counts."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Design tradeoffs",
+          "conceptIds": [
+            "stage-04-workflows.5"
+          ],
+          "paragraphs": [
+            "Deterministic path: Provides explicit predictable control for known processes.",
+            "Dynamic agent: Chooses actions when the path cannot be fixed usefully.",
+            "Minimal composition: Avoid unnecessary steps and dependencies.",
+            "Representative evaluation: Tests the design on actual success criteria."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Patterns: a worked decision",
+          "scenario": "Extract data before validating it?",
+          "walkthrough": "Choose Sequence. Runs steps in a defined order.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Contracts: a worked decision",
+          "scenario": "Ensure input exists before parsing?",
+          "walkthrough": "Choose Precondition. States what must hold before a step runs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Failure policies: a worked decision",
+          "scenario": "Repeat a temporary read failure with backoff?",
+          "walkthrough": "Choose Retry. Repeat eligible transient work under a bounded policy.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Execution records: a worked decision",
+          "scenario": "Follow one request across multiple services?",
+          "walkthrough": "Choose Correlation ID. Connects events belonging to one logical execution.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Design tradeoffs: a worked decision",
+          "scenario": "A process has clear fixed business rules. What design fits?",
+          "walkthrough": "Choose Deterministic path. Provides explicit predictable control for known processes.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Patterns: distinguish Sequence, Routing, Parallelism, Evaluator loop.",
+        "Contracts: distinguish Precondition, Postcondition, Schema, Invariant.",
+        "Failure policies: distinguish Retry, Compensation, Timeout, Escalation.",
+        "Execution records: distinguish Correlation ID, Checkpoint, Audit event, Metric.",
+        "Design tradeoffs: distinguish Deterministic path, Dynamic agent, Minimal composition, Representative evaluation."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Workflows: primary documentation",
+          "url": "https://www.anthropic.com/research/building-effective-agents"
+        }
+      ]
+    },
+    {
+      "id": "stage-04-a2a-lesson",
+      "stageId": "stage-04",
+      "topicId": "stage-04-a2a",
+      "title": "Agent-to-Agent (A2A)",
+      "summary": "Understand agent-to-agent (a2a) by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-04-a2a.1",
+        "stage-04-a2a.2",
+        "stage-04-a2a.3",
+        "stage-04-a2a.4",
+        "stage-04-a2a.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Entities",
+          "conceptIds": [
+            "stage-04-a2a.1"
+          ],
+          "paragraphs": [
+            "Agent card: Describes an agent's identity and advertised capabilities.",
+            "Task: Represents work with a lifecycle rather than just a chat string.",
+            "Message: Carries conversational content exchanged between participants.",
+            "Artifact: Represents an output produced by task execution."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Lifecycle",
+          "conceptIds": [
+            "stage-04-a2a.2"
+          ],
+          "paragraphs": [
+            "Submitted: Work has been accepted for processing.",
+            "Working: Execution is in progress.",
+            "Input required: Execution needs further information or a decision.",
+            "Completed: Execution has finished successfully under its reported contract."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Boundaries",
+          "conceptIds": [
+            "stage-04-a2a.3"
+          ],
+          "paragraphs": [
+            "A2A interaction: Coordinates tasks between participating agents.",
+            "Tool access: Invokes a narrower capability through an appropriate tool interface.",
+            "Internal architecture: Remains an implementation choice behind an agent endpoint.",
+            "Application authorization: Controls who may delegate or perform consequential work."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Asynchronous behavior",
+          "conceptIds": [
+            "stage-04-a2a.4"
+          ],
+          "paragraphs": [
+            "Status update: Reports progress or a lifecycle change.",
+            "Cancellation request: Asks to stop work but must account for already completed effects.",
+            "Polling: Checks task state through repeated bounded requests.",
+            "Streaming: Receives supported incremental events over an active interaction."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Reliability and trust",
+          "conceptIds": [
+            "stage-04-a2a.5"
+          ],
+          "paragraphs": [
+            "Identity verification: Establish that the peer is the intended service.",
+            "Capability verification: Check advertised functionality against required task needs.",
+            "Result validation: Evaluate returned artifacts before relying on them.",
+            "Protocol compatibility: Use supported message and lifecycle contracts."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Entities: a worked decision",
+          "scenario": "Discover a remote agent's advertised skills?",
+          "walkthrough": "Choose Agent card. Describes an agent's identity and advertised capabilities.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Lifecycle: a worked decision",
+          "scenario": "A queued task was accepted but has not begun. What state fits?",
+          "walkthrough": "Choose Submitted. Work has been accepted for processing.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Boundaries: a worked decision",
+          "scenario": "Delegate a task to a remote peer agent?",
+          "walkthrough": "Choose A2A interaction. Coordinates tasks between participating agents.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Asynchronous behavior: a worked decision",
+          "scenario": "Receive notification that a task needs input?",
+          "walkthrough": "Choose Status update. Reports progress or a lifecycle change.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Reliability and trust: a worked decision",
+          "scenario": "Avoid delegating private work to an impersonated peer?",
+          "walkthrough": "Choose Identity verification. Establish that the peer is the intended service.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Entities: distinguish Agent card, Task, Message, Artifact.",
+        "Lifecycle: distinguish Submitted, Working, Input required, Completed.",
+        "Boundaries: distinguish A2A interaction, Tool access, Internal architecture, Application authorization.",
+        "Asynchronous behavior: distinguish Status update, Cancellation request, Polling, Streaming.",
+        "Reliability and trust: distinguish Identity verification, Capability verification, Result validation, Protocol compatibility."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Agent-to-Agent (A2A): primary documentation",
+          "url": "https://a2a-protocol.org/latest/topics/key-concepts/"
+        }
+      ]
+    }
+  ]
+}

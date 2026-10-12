@@ -1,0 +1,1887 @@
+{
+  "schemaVersion": "1",
+  "bankVersion": "review-generative-ai-b01.1",
+  "releaseTargetPerTopic": 400,
+  "questions": [
+    {
+      "id": "af-generative-ai-0004",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "easy",
+      "prompt": "A search tool returns an unchanged paragraph from an indexed manual. What operation is demonstrated?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retrieval of existing content"
+        },
+        {
+          "id": "b",
+          "text": "Generation of a new explanation"
+        },
+        {
+          "id": "c",
+          "text": "Training a new model"
+        },
+        {
+          "id": "d",
+          "text": "Creation of synthetic training examples"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "The output is retrieved verbatim; retrieval can be part of a larger generative workflow without itself creating content.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0005",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "easy",
+      "prompt": "Which output is a transformation of supplied content rather than an unconstrained creation task?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A category assigned to the report"
+        },
+        {
+          "id": "b",
+          "text": "A shorter account of a supplied report"
+        },
+        {
+          "id": "c",
+          "text": "A stored copy of the report"
+        },
+        {
+          "id": "d",
+          "text": "A relevance score for the report"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Summarization produces a new representation grounded in supplied material.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0006",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "easy",
+      "prompt": "A tool converts a supplied English sentence into newly produced French text. Which capability is being used?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Image classification"
+        },
+        {
+          "id": "b",
+          "text": "Parameter optimization"
+        },
+        {
+          "id": "c",
+          "text": "Conditional text generation"
+        },
+        {
+          "id": "d",
+          "text": "Exact document retrieval"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "The source sentence conditions the creation of a target-language sentence.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0007",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "medium",
+      "prompt": "A design workflow proposes four previously unstored layouts, then scores them with fixed rules. Where is the generative step?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Applying the fixed scoring rules"
+        },
+        {
+          "id": "b",
+          "text": "Sorting the scores"
+        },
+        {
+          "id": "c",
+          "text": "Reading the saved design brief"
+        },
+        {
+          "id": "d",
+          "text": "Producing the candidate layouts"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Candidate creation is distinct from rule-based evaluation and ranking.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0008",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "medium",
+      "prompt": "A music tool creates a continuation from a supplied melody. How does the supplied melody function?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It conditions the generated continuation"
+        },
+        {
+          "id": "b",
+          "text": "It is the completed output returned unchanged"
+        },
+        {
+          "id": "c",
+          "text": "It proves the continuation is original"
+        },
+        {
+          "id": "d",
+          "text": "It replaces the model parameters"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "A seed melody constrains the continuation but does not establish originality or alter trained parameters.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0009",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "medium",
+      "prompt": "A dashboard calls an image classifier a generator because its labels change for different images. What is the relevant correction?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A label must be a photograph to count as classification"
+        },
+        {
+          "id": "b",
+          "text": "Input-dependent labels still classify existing inputs"
+        },
+        {
+          "id": "c",
+          "text": "Any variable output establishes generative modeling"
+        },
+        {
+          "id": "d",
+          "text": "Classification requires the same output for every input"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Output variation alone does not distinguish classification from generation; examine the task and modeled quantity.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0010",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "hard",
+      "prompt": "A system samples a new picture given a category, while another estimates a category given a picture. Which comparison matches these directions?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The first retrieves; the second necessarily generates a picture"
+        },
+        {
+          "id": "b",
+          "text": "Neither can be a model unless it returns a numeric probability"
+        },
+        {
+          "id": "c",
+          "text": "The first generates conditioned content; the second predicts a label from content"
+        },
+        {
+          "id": "d",
+          "text": "Both perform identical operations because both use categories"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Generating content conditional on a label and predicting a label from content are different modeling directions.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0011",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "hard",
+      "prompt": "A pipeline retrieves a passage, writes a paraphrase and then assigns a quality grade. Which description avoids treating every component as generation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Retrieval creates the source facts and grading trains the paraphraser"
+        },
+        {
+          "id": "b",
+          "text": "All three steps generate equivalent new content"
+        },
+        {
+          "id": "c",
+          "text": "Only the quality grade is generated content because it appears last"
+        },
+        {
+          "id": "d",
+          "text": "Retrieval supplies evidence, paraphrasing creates text, and grading evaluates it"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Separate the retrieval, transformation and evaluation responsibilities even when they share one product interface.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0012",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "easy",
+      "prompt": "What is a data distribution intended to describe?",
+      "options": [
+        {
+          "id": "a",
+          "text": "How values or examples occur across possible outcomes"
+        },
+        {
+          "id": "b",
+          "text": "The order in which files are stored"
+        },
+        {
+          "id": "c",
+          "text": "The number of servers hosting a dataset"
+        },
+        {
+          "id": "d",
+          "text": "A list of correct answers to every future request"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "A distribution describes patterns of occurrence rather than storage layout or an exhaustive answer key.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0013",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "easy",
+      "prompt": "Must a generative model display a numerical probability to demonstrate distribution modeling?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No; any copied file establishes distribution modeling"
+        },
+        {
+          "id": "b",
+          "text": "No; sampling can reflect an implicitly modeled distribution"
+        },
+        {
+          "id": "c",
+          "text": "Yes; every sample must include a probability table"
+        },
+        {
+          "id": "d",
+          "text": "Yes; otherwise the operation is necessarily retrieval"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "A sampler can model a distribution implicitly without exposing numerical likelihoods.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0014",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "easy",
+      "prompt": "A face generator produces mostly one age group although the target application serves many ages. What should the team examine?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whether every image has the same pixel dimensions"
+        },
+        {
+          "id": "b",
+          "text": "Whether output latency is below a fixed threshold"
+        },
+        {
+          "id": "c",
+          "text": "Representation of age groups in training data and generated samples"
+        },
+        {
+          "id": "d",
+          "text": "Only the filename convention of generated images"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Distribution coverage includes representation of relevant groups, beyond format or speed.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0015",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "medium",
+      "prompt": "Two generators produce equally sharp images, but only one reproduces the varied scene types expected by users. Which evaluation separates them?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Compare only average file size"
+        },
+        {
+          "id": "b",
+          "text": "Choose the one with more output filenames"
+        },
+        {
+          "id": "c",
+          "text": "Check only whether the image viewer opens the files"
+        },
+        {
+          "id": "d",
+          "text": "Compare generated scene coverage with the target distribution"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Visual sharpness does not measure whether output covers the required range of scenes.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0016",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "medium",
+      "prompt": "A dataset contains coastlines and lakes but few deserts. Which generalization claim needs additional evidence?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The trained generator reliably covers desert landscapes"
+        },
+        {
+          "id": "b",
+          "text": "The dataset can contain more than one landscape type"
+        },
+        {
+          "id": "c",
+          "text": "A generated picture has a finite size"
+        },
+        {
+          "id": "d",
+          "text": "Training examples can influence learned patterns"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Sparse representation weakens an untested claim about reliable coverage of the underrepresented category.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0017",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "medium",
+      "prompt": "A generator achieves the target average brightness while producing only uniform gray images. Which limitation does the average hide?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It must have learned labels rather than images"
+        },
+        {
+          "id": "b",
+          "text": "It misses spatial structure and diversity despite matching one statistic"
+        },
+        {
+          "id": "c",
+          "text": "It necessarily matches every property of the target distribution"
+        },
+        {
+          "id": "d",
+          "text": "It has proved that real images contain no objects"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Agreement on one summary statistic does not establish distributional fidelity.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0018",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "hard",
+      "prompt": "A generator trained on several distinct product styles emits one convincing style repeatedly. Which diagnosis best fits this evidence?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Guaranteed privacy leakage because a style repeats"
+        },
+        {
+          "id": "b",
+          "text": "Perfect convergence because the outputs are consistent"
+        },
+        {
+          "id": "c",
+          "text": "Possible mode collapse: fidelity in a narrow subset with poor diversity"
+        },
+        {
+          "id": "d",
+          "text": "Complete coverage because each sample looks convincing"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Mode collapse can produce convincing samples while failing to represent multiple modes.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/problems",
+        "title": "Google: Common GAN problems",
+        "locator": "Mode collapse",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0019",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "hard",
+      "prompt": "An evaluator checks whether generated photographs look plausible but never compares recurring correlations with real data. What remains untested?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whether the files can be decoded at all"
+        },
+        {
+          "id": "b",
+          "text": "Whether images contain bytes"
+        },
+        {
+          "id": "c",
+          "text": "Whether every output is accompanied by an explicit likelihood"
+        },
+        {
+          "id": "d",
+          "text": "Whether modeled relationships match the target distribution"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Distribution modeling concerns relationships and coverage as well as individual plausibility.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "Google: What is a Generative Model?",
+        "locator": "Modeling Probabilities; Generative Models Are Hard",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0020",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "easy",
+      "prompt": "A request supplies a photograph and asks for a written description. What are the input and output modalities?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Image input and text output"
+        },
+        {
+          "id": "b",
+          "text": "Text input and image output"
+        },
+        {
+          "id": "c",
+          "text": "Audio input and text output"
+        },
+        {
+          "id": "d",
+          "text": "Image input and image output"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "The modality follows the actual form of information entering and leaving the model.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+        "title": "Google: Image generation",
+        "locator": "Text-to-image; image editing",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0021",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "easy",
+      "prompt": "An API accepts text prompts but returns only images. What does this interface establish?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Every modality is both an input and an output"
+        },
+        {
+          "id": "b",
+          "text": "Text-conditioned image output is supported"
+        },
+        {
+          "id": "c",
+          "text": "Audio output is supported whenever requested"
+        },
+        {
+          "id": "d",
+          "text": "Video input is supported because images are visual"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Capabilities must be inferred from the documented interface, not extended to unsupported modalities.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+        "title": "Google: Image generation",
+        "locator": "Text-to-image; image editing",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0022",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "medium",
+      "prompt": "A learner uploads speech and receives a written transcript. Which task describes the requested output?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Image-to-image editing"
+        },
+        {
+          "id": "b",
+          "text": "Video-frame classification"
+        },
+        {
+          "id": "c",
+          "text": "Audio-to-text transcription"
+        },
+        {
+          "id": "d",
+          "text": "Text-to-audio synthesis"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Transcription represents spoken content as text rather than synthesizing an audio signal.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/audio",
+        "title": "Google: Audio understanding",
+        "locator": "Transcribing audio; audio understanding",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0023",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "medium",
+      "prompt": "A team needs an existing photograph edited, rather than a picture created solely from text. Which capability must it verify?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only support for plain text output"
+        },
+        {
+          "id": "b",
+          "text": "Only support for counting characters in a prompt"
+        },
+        {
+          "id": "c",
+          "text": "Whether an unrelated transcription endpoint accepts sound"
+        },
+        {
+          "id": "d",
+          "text": "Support for image input with image output and editing instructions"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Image editing requires the relevant visual input/output path, not merely a generic generative label.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+        "title": "Google: Image generation",
+        "locator": "Text-to-image; image editing",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0024",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "medium",
+      "prompt": "A voice assistant returns a written response, but the product needs audible speech. What additional capability is required?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Speech synthesis or an audio-output path"
+        },
+        {
+          "id": "b",
+          "text": "Another text-only response with the same wording"
+        },
+        {
+          "id": "c",
+          "text": "A larger image resolution"
+        },
+        {
+          "id": "d",
+          "text": "A new class label for the existing response"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "An audible result requires an audio-producing stage rather than text alone.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/speech-generation",
+        "title": "Google: Speech generation",
+        "locator": "Text-to-speech generation",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0025",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "medium",
+      "prompt": "A model understands an uploaded image but its documented response format is text only. What is a justified capability claim?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Any model accepting an image must also accept video"
+        },
+        {
+          "id": "b",
+          "text": "It can analyze image input without necessarily generating images"
+        },
+        {
+          "id": "c",
+          "text": "Image understanding guarantees image synthesis"
+        },
+        {
+          "id": "d",
+          "text": "Text output means no image was processed"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Input understanding and output generation capabilities are separate interface properties.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+        "title": "Google: Image generation",
+        "locator": "Text-to-image; image editing",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0026",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "hard",
+      "prompt": "An endpoint accepts mixed image and text input. A product now needs video clips with synchronized audio as output. What follows from the existing input support?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Image input guarantees a fixed video duration"
+        },
+        {
+          "id": "b",
+          "text": "Text input automatically supplies synchronized audio"
+        },
+        {
+          "id": "c",
+          "text": "Nothing sufficient; verify the required video and audio output contract separately"
+        },
+        {
+          "id": "d",
+          "text": "The endpoint must support the required output because the input is multimodal"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A multimodal input contract does not establish a different multimodal output contract.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+        "title": "Google: Image generation",
+        "locator": "Text-to-image; image editing",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0027",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.modalities",
+      "difficulty": "hard",
+      "prompt": "A recording tool can transcribe speech and label background sounds. Which request specifically requires transcription rather than general audio description?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Identify whether rain is audible"
+        },
+        {
+          "id": "b",
+          "text": "Describe the mood of the soundtrack"
+        },
+        {
+          "id": "c",
+          "text": "Name the instrument playing in the background"
+        },
+        {
+          "id": "d",
+          "text": "Return the words spoken by the speaker"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Speech transcription targets linguistic content; audio understanding also includes non-speech properties.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/audio",
+        "title": "Google: Audio understanding",
+        "locator": "Transcribing audio; audio understanding",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0028",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "easy",
+      "prompt": "After training a GAN, which component produces new image samples from its input?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The generator"
+        },
+        {
+          "id": "b",
+          "text": "The discriminator alone"
+        },
+        {
+          "id": "c",
+          "text": "The dataset loader alone"
+        },
+        {
+          "id": "d",
+          "text": "The optimizer state alone"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "The generator creates samples; the discriminator evaluates real versus generated examples during training.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/gan_structure",
+        "title": "Google: Overview of GAN structure",
+        "locator": "Generator and discriminator",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0029",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "easy",
+      "prompt": "Which operation directly changes learned model parameters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Sorting previously generated images"
+        },
+        {
+          "id": "b",
+          "text": "Applying an optimizer update based on a training loss"
+        },
+        {
+          "id": "c",
+          "text": "Saving a generated image to disk"
+        },
+        {
+          "id": "d",
+          "text": "Showing a new prompt to a fixed model"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Training updates parameters; ordinary output handling and fixed-model requests do not.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "title": "Google: Machine learning glossary",
+        "locator": "Inference; training; fine-tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0030",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "medium",
+      "prompt": "A customer changes an image prompt from watercolor to pencil sketch while weights remain fixed. What has changed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Every historical training example"
+        },
+        {
+          "id": "b",
+          "text": "The output modality from image to audio"
+        },
+        {
+          "id": "c",
+          "text": "The inference input, not the trained parameters"
+        },
+        {
+          "id": "d",
+          "text": "The model training corpus through an optimizer update"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Changing conditioning input can alter outputs while leaving parameters unchanged.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "title": "Google: Machine learning glossary",
+        "locator": "Inference; training; fine-tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0031",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "medium",
+      "prompt": "A team adapts a pretrained image generator by optimizing its parameters on a new dataset. What operation is described?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Inference with an unchanged model"
+        },
+        {
+          "id": "b",
+          "text": "Verbatim retrieval of a stored image"
+        },
+        {
+          "id": "c",
+          "text": "A file-format conversion of outputs"
+        },
+        {
+          "id": "d",
+          "text": "Additional training or fine-tuning"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Parameter optimization on additional data is a training operation even when a pretrained model is the starting point.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "title": "Google: Machine learning glossary",
+        "locator": "Inference; training; fine-tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0032",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "medium",
+      "prompt": "A GAN discriminator is being trained while the generator is held fixed. Why hold the generator fixed during this phase?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To give the discriminator a stable source of generated examples during its update phase"
+        },
+        {
+          "id": "b",
+          "text": "To prevent the discriminator from receiving any generated examples"
+        },
+        {
+          "id": "c",
+          "text": "To make both networks permanently identical"
+        },
+        {
+          "id": "d",
+          "text": "To eliminate the need for training data"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Alternating updates avoid simultaneously moving both sides of the adversarial objective during a training phase.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/training",
+        "title": "Google: GAN training",
+        "locator": "Alternating Training",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0033",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "medium",
+      "prompt": "A batch of generated images is rated by reviewers, but the ratings are only archived. What would justify saying the model learned from those ratings?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The reviewers agree on the highest score"
+        },
+        {
+          "id": "b",
+          "text": "A subsequent learning procedure actually uses them to update parameters"
+        },
+        {
+          "id": "c",
+          "text": "The ratings are displayed next to each image"
+        },
+        {
+          "id": "d",
+          "text": "The archive filename contains the word training"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Collecting feedback is distinct from applying it in a parameter-updating procedure.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "title": "Google: Machine learning glossary",
+        "locator": "Inference; training; fine-tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0034",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "hard",
+      "prompt": "During a GAN generator-update phase, which network is normally held fixed while its feedback guides the generator?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both networks throughout all phases"
+        },
+        {
+          "id": "b",
+          "text": "Neither, because alternating training updates both on every step"
+        },
+        {
+          "id": "c",
+          "text": "The discriminator"
+        },
+        {
+          "id": "d",
+          "text": "The generator itself"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "The discriminator supplies a stable training signal while generator parameters are updated in that phase.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/training",
+        "title": "Google: GAN training",
+        "locator": "Alternating Training",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0035",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.training-inference",
+      "difficulty": "hard",
+      "prompt": "An image service retains user prompts in logs. A developer concludes that the deployed model has already learned from them. What evidence is missing?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Evidence that the logs have timestamps"
+        },
+        {
+          "id": "b",
+          "text": "Evidence that the service returned an image"
+        },
+        {
+          "id": "c",
+          "text": "Evidence that the prompts contain natural language"
+        },
+        {
+          "id": "d",
+          "text": "Evidence that those logs were used in a parameter-updating training process"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Storage is not training; parameter updates require an actual learning process using the data.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary",
+        "title": "Google: Machine learning glossary",
+        "locator": "Inference; training; fine-tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0036",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "easy",
+      "prompt": "A generated explanation contains a quotation attributed to a named source. What should establish that quotation\u2019s accuracy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Checking it against the original source"
+        },
+        {
+          "id": "b",
+          "text": "Its confident tone"
+        },
+        {
+          "id": "c",
+          "text": "Its length relative to the prompt"
+        },
+        {
+          "id": "d",
+          "text": "The fact that it uses quotation marks"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Presentation does not verify attribution; compare the quotation with the original evidence.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0037",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "easy",
+      "prompt": "What does a safety filter primarily aim to address?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The completeness of all training data"
+        },
+        {
+          "id": "b",
+          "text": "Specified categories of harmful content"
+        },
+        {
+          "id": "c",
+          "text": "Every factual error in an otherwise harmless response"
+        },
+        {
+          "id": "d",
+          "text": "Every numerical calculation automatically"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Safety filtering and factual verification are distinct quality controls.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0038",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "medium",
+      "prompt": "A generated product description invents an extra accessory. Which release check directly addresses this defect?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Confirm that the response has three paragraphs"
+        },
+        {
+          "id": "b",
+          "text": "Measure whether generation finished quickly"
+        },
+        {
+          "id": "c",
+          "text": "Compare product claims against the verified specification"
+        },
+        {
+          "id": "d",
+          "text": "Check only spelling and grammar"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A specification-grounded claim check targets unsupported product details.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0039",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "medium",
+      "prompt": "A generated explanation includes a URL that looks plausible. Before presenting it as evidence, what should be checked?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only that the URL contains a familiar organization name"
+        },
+        {
+          "id": "b",
+          "text": "Only that the URL string is sufficiently long"
+        },
+        {
+          "id": "c",
+          "text": "That the link text uses the same font as the answer"
+        },
+        {
+          "id": "d",
+          "text": "That the page exists and supports the associated claim"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "A citation-shaped string is not evidence without source existence and claim alignment.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0040",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "medium",
+      "prompt": "An image generator has only been tested with harmless landscape requests. Which added evaluation directly addresses misuse risk?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Test adversarial requests for disallowed visual content"
+        },
+        {
+          "id": "b",
+          "text": "Measure only the time needed to render a landscape"
+        },
+        {
+          "id": "c",
+          "text": "Check only the spelling of landscape filenames"
+        },
+        {
+          "id": "d",
+          "text": "Compare only the compression ratio of landscape images"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Adversarial safety testing checks whether harmful requests can bypass safeguards; image quality and speed checks assess different properties.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0041",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "medium",
+      "prompt": "A generated recommendation concerns a high-impact decision and has not been checked. Which workflow is most appropriate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Replace its source citations with a general confidence statement"
+        },
+        {
+          "id": "b",
+          "text": "Route it through suitable evidence checks and responsible human review"
+        },
+        {
+          "id": "c",
+          "text": "Publish it immediately if the wording is concise"
+        },
+        {
+          "id": "d",
+          "text": "Treat the absence of a safety warning as verification"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "High-impact use calls for verification and appropriate oversight, not reliance on fluency or filtering alone.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0042",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "hard",
+      "prompt": "A system passes harmful-content tests but gives fabricated historical dates. What does this show?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Every factual error is necessarily blocked by the same filters"
+        },
+        {
+          "id": "b",
+          "text": "The only remaining issue is response formatting"
+        },
+        {
+          "id": "c",
+          "text": "Safety-policy performance does not establish factual accuracy"
+        },
+        {
+          "id": "d",
+          "text": "Passing safety tests proves the dates are correct"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Different tests assess different risks; factuality needs its own evidence and evaluation.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0043",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.reliability",
+      "difficulty": "hard",
+      "prompt": "A developer repeats one prompt five times and gets the same unsupported claim. Which conclusion is warranted?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Repetition supplies five independent authoritative sources"
+        },
+        {
+          "id": "b",
+          "text": "A stable answer is necessarily grounded in current evidence"
+        },
+        {
+          "id": "c",
+          "text": "The claim becomes verified once variations disappear"
+        },
+        {
+          "id": "d",
+          "text": "Consistency alone does not verify the claim"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Repeated agreement from the same generative system is not independent factual corroboration.",
+      "reference": {
+        "url": "https://ai.google.dev/gemini-api/docs/safety-guidance",
+        "title": "Google: Safety and factuality guidance",
+        "locator": "Understand risks; perform safety testing; factuality",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "review-generative-ai-b01.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    }
+  ]
+}

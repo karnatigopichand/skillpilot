@@ -1,0 +1,15 @@
+{
+  "reason": "Unpublished semantic replacements receive new stable IDs. No deployed IDs retired.",
+  "replacements": [
+    {
+      "retiredId": "af-llms-0015",
+      "replacementId": "af-llms-0051",
+      "reason": "Separate language-specific masked-token supervision from broad generative training-loss objective."
+    },
+    {
+      "retiredId": "af-tokens-0018",
+      "replacementId": "af-tokens-0051",
+      "reason": "Replace a second addition exercise with accounting-category interpretation."
+    }
+  ]
+}

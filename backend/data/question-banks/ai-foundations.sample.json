@@ -1,0 +1,853 @@
+{
+  "schemaVersion": "1",
+  "bankVersion": "sample-0.1",
+  "releaseTargetPerTopic": 400,
+  "questions": [
+    {
+      "id": "af-generative-ai-0001",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "easy",
+      "prompt": "Which task directly creates a new content sample?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Classifying a message as spam"
+        },
+        {
+          "id": "b",
+          "text": "Drawing an image from a description"
+        },
+        {
+          "id": "c",
+          "text": "Sorting invoices by date"
+        },
+        {
+          "id": "d",
+          "text": "Looking up a stored customer record"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Creating an image is generation; the other tasks categorize or retrieve existing data.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0002",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.task-types",
+      "difficulty": "medium",
+      "prompt": "A system assigns one existing label, cat or dog, to each photo. How is this task best described?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Discriminative classification"
+        },
+        {
+          "id": "b",
+          "text": "Image synthesis"
+        },
+        {
+          "id": "c",
+          "text": "Unconditional generation"
+        },
+        {
+          "id": "d",
+          "text": "Document retrieval"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "The task distinguishes labels for an existing input rather than producing a new photo.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-generative-ai-0003",
+      "topicId": "ai-foundations-generative-ai",
+      "conceptId": "generative-ai.distribution",
+      "difficulty": "hard",
+      "prompt": "A generator produces many convincing handwritten digits. What does this observation most directly support?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It verified every digit against a database"
+        },
+        {
+          "id": "b",
+          "text": "It learned a perfect classifier"
+        },
+        {
+          "id": "c",
+          "text": "It can sample patterns resembling the training distribution"
+        },
+        {
+          "id": "d",
+          "text": "It stored an exact copy of every training image"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Plausible samples indicate modeling of data patterns; they do not prove lookup, classification or exact memorization.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/gan/generative",
+        "title": "What is a Generative Model?",
+        "locator": "Generative versus discriminative models",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-llms-0001",
+      "topicId": "ai-foundations-llms",
+      "conceptId": "llms.prediction",
+      "difficulty": "easy",
+      "prompt": "In autoregressive language generation, what is predicted at each generation step?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The complete training dataset"
+        },
+        {
+          "id": "b",
+          "text": "The next token given the preceding sequence"
+        },
+        {
+          "id": "c",
+          "text": "A new set of model weights"
+        },
+        {
+          "id": "d",
+          "text": "The physical location of the user"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Autoregressive generation extends the preceding sequence with a predicted token.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/crash-course/llm",
+        "title": "Introduction to Large Language Models",
+        "locator": "Predicting the next token",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-llms-0002",
+      "topicId": "ai-foundations-llms",
+      "conceptId": "llms.training-inference",
+      "difficulty": "medium",
+      "prompt": "A developer submits a normal prompt to a fixed pretrained model, without training it. What is this operation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pretraining"
+        },
+        {
+          "id": "b",
+          "text": "Instruction tuning"
+        },
+        {
+          "id": "c",
+          "text": "Inference"
+        },
+        {
+          "id": "d",
+          "text": "Dataset labeling"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Using a fixed model to produce a response is inference, rather than updating its parameters.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary/generative",
+        "title": "Machine Learning Glossary: Generative AI",
+        "locator": "language model; pre-training; instruction tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-llms-0003",
+      "topicId": "ai-foundations-llms",
+      "conceptId": "llms.instruction-tuning",
+      "difficulty": "hard",
+      "prompt": "Why might a broadly pretrained language model undergo instruction tuning?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To replace tokens with database rows"
+        },
+        {
+          "id": "b",
+          "text": "To give it unlimited context"
+        },
+        {
+          "id": "c",
+          "text": "To guarantee all generated statements are true"
+        },
+        {
+          "id": "d",
+          "text": "To adapt its behavior toward following instructions"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Instruction tuning changes behavior using instruction-oriented training; it does not guarantee truth or unlimited context.",
+      "reference": {
+        "url": "https://developers.google.com/machine-learning/glossary/generative",
+        "title": "Machine Learning Glossary: Generative AI",
+        "locator": "language model; pre-training; instruction tuning",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-tokens-0001",
+      "topicId": "ai-foundations-tokens",
+      "conceptId": "tokens.segmentation",
+      "difficulty": "easy",
+      "prompt": "Which statement about a text token is accurate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It must contain exactly one word"
+        },
+        {
+          "id": "b",
+          "text": "It must contain exactly one sentence"
+        },
+        {
+          "id": "c",
+          "text": "It can represent part of a word"
+        },
+        {
+          "id": "d",
+          "text": "It is always one byte"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Text tokenization can split words into smaller pieces.",
+      "reference": {
+        "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+        "title": "Understanding and counting tokens",
+        "locator": "What are tokens?; tokenization variability",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-tokens-0002",
+      "topicId": "ai-foundations-tokens",
+      "conceptId": "tokens.counting",
+      "difficulty": "medium",
+      "prompt": "Two supported models use different tokenizers. What should an application do to budget the same text for each?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Count using the tokenizer for each model"
+        },
+        {
+          "id": "b",
+          "text": "Use the character count as the exact token count"
+        },
+        {
+          "id": "c",
+          "text": "Assume all tokenizers produce equal counts"
+        },
+        {
+          "id": "d",
+          "text": "Divide the word count by two"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Token counts depend on the tokenizer; fixed character or word conversions are estimates.",
+      "reference": {
+        "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+        "title": "Understanding and counting tokens",
+        "locator": "What are tokens?; tokenization variability",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-tokens-0003",
+      "topicId": "ai-foundations-tokens",
+      "conceptId": "tokens.language-variation",
+      "difficulty": "hard",
+      "prompt": "Two translations convey the same meaning but have different token counts under one tokenizer. Which explanation is most appropriate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "One translation necessarily contains more facts"
+        },
+        {
+          "id": "b",
+          "text": "The tokenizer always allocates one token per word"
+        },
+        {
+          "id": "c",
+          "text": "The tokenizer changed the context limit"
+        },
+        {
+          "id": "d",
+          "text": "Segmentation differs across languages and text"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Equivalent meaning does not require identical token segmentation or count.",
+      "reference": {
+        "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+        "title": "Understanding and counting tokens",
+        "locator": "What are tokens?; tokenization variability",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-context-windows-0001",
+      "topicId": "ai-foundations-context-windows",
+      "conceptId": "context-windows.budgeting",
+      "difficulty": "easy",
+      "prompt": "For a model whose window includes input and output, which consumes the request token budget?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only the newest user sentence"
+        },
+        {
+          "id": "b",
+          "text": "Supplied input and generated output"
+        },
+        {
+          "id": "c",
+          "text": "Only stored model parameters"
+        },
+        {
+          "id": "d",
+          "text": "Only messages created by a developer"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Both supplied context and generated output occupy a shared window in this stated model.",
+      "reference": {
+        "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+        "title": "Understanding and counting tokens",
+        "locator": "Token limits: input and output tokens",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-context-windows-0002",
+      "topicId": "ai-foundations-context-windows",
+      "conceptId": "context-windows.budgeting",
+      "difficulty": "medium",
+      "prompt": "A hypothetical model has a 12,000-token shared window. Supplied input uses 9,000 tokens, including all overhead. What is the largest output that fits, ignoring any separate output cap?",
+      "options": [
+        {
+          "id": "a",
+          "text": "12,000 tokens"
+        },
+        {
+          "id": "b",
+          "text": "9,000 tokens"
+        },
+        {
+          "id": "c",
+          "text": "3,000 tokens"
+        },
+        {
+          "id": "d",
+          "text": "21,000 tokens"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Subtract the 9,000 input tokens from the stated 12,000-token shared budget.",
+      "reference": {
+        "url": "https://help.openai.com/en/articles/4936856-understanding-and-counting-tokens",
+        "title": "Understanding and counting tokens",
+        "locator": "Token limits: input and output tokens",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-context-windows-0003",
+      "topicId": "ai-foundations-context-windows",
+      "conceptId": "context-windows.compaction",
+      "difficulty": "hard",
+      "prompt": "A conversation is compacted into a summary to fit a request. Which risk should be checked?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A necessary detail may be omitted from the summary"
+        },
+        {
+          "id": "b",
+          "text": "The model parameters must be retrained"
+        },
+        {
+          "id": "c",
+          "text": "Token counting becomes impossible"
+        },
+        {
+          "id": "d",
+          "text": "The summary automatically expands the context limit"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "Compaction trades context size for retained information; verify that essential details survive.",
+      "reference": {
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+        "title": "Effective context engineering for AI agents",
+        "locator": "Context as a finite resource; context compaction",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-prompting-0001",
+      "topicId": "ai-foundations-prompting",
+      "conceptId": "prompting.instructions",
+      "difficulty": "easy",
+      "prompt": "Which instruction best defines a bounded summarization task?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Tell me something useful"
+        },
+        {
+          "id": "b",
+          "text": "Make it good"
+        },
+        {
+          "id": "c",
+          "text": "Do whatever seems right"
+        },
+        {
+          "id": "d",
+          "text": "Summarize the supplied report in three bullets for a nontechnical reader"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "The instruction defines source, format and audience, making the requested task clearer.",
+      "reference": {
+        "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+        "title": "Prompt engineering",
+        "locator": "Message formatting; few-shot learning; evaluation",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-prompting-0002",
+      "topicId": "ai-foundations-prompting",
+      "conceptId": "prompting.examples",
+      "difficulty": "medium",
+      "prompt": "A prompt includes three input-output examples before a new input. What technique is this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Parameter fine-tuning"
+        },
+        {
+          "id": "b",
+          "text": "Few-shot prompting"
+        },
+        {
+          "id": "c",
+          "text": "Training a tokenizer"
+        },
+        {
+          "id": "d",
+          "text": "Increasing the context limit"
+        }
+      ],
+      "correctOptionId": "b",
+      "explanation": "Few-shot prompting demonstrates the task through examples supplied in context.",
+      "reference": {
+        "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+        "title": "Prompt engineering",
+        "locator": "Message formatting; few-shot learning; evaluation",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-prompting-0003",
+      "topicId": "ai-foundations-prompting",
+      "conceptId": "prompting.evaluation",
+      "difficulty": "hard",
+      "prompt": "A revised prompt succeeds on one example. What provides stronger evidence that it improves the task overall?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Making the prompt longer"
+        },
+        {
+          "id": "b",
+          "text": "Repeating the same successful example"
+        },
+        {
+          "id": "c",
+          "text": "Comparing both prompts on a representative evaluation set"
+        },
+        {
+          "id": "d",
+          "text": "Removing all difficult cases"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "Representative evaluation checks behavior across cases rather than assuming one success generalizes.",
+      "reference": {
+        "url": "https://developers.openai.com/api/docs/guides/prompt-engineering",
+        "title": "Prompt engineering",
+        "locator": "Message formatting; few-shot learning; evaluation",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-structured-outputs-0001",
+      "topicId": "ai-foundations-structured-outputs",
+      "conceptId": "structured-outputs.syntax-schema",
+      "difficulty": "easy",
+      "prompt": "A response parses as JSON. What additional check establishes whether required fields and types match the application contract?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate against the expected schema"
+        },
+        {
+          "id": "b",
+          "text": "Count its words"
+        },
+        {
+          "id": "c",
+          "text": "Convert it to uppercase"
+        },
+        {
+          "id": "d",
+          "text": "Check whether it contains a newline"
+        }
+      ],
+      "correctOptionId": "a",
+      "explanation": "JSON syntax alone does not establish field or type conformity.",
+      "reference": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "title": "Structured model outputs",
+        "locator": "JSON mode; handling mistakes; refusals",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-structured-outputs-0002",
+      "topicId": "ai-foundations-structured-outputs",
+      "conceptId": "structured-outputs.semantic-validation",
+      "difficulty": "medium",
+      "prompt": "A schema-valid response gives a city name that is factually wrong. What has schema validation established?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The city is correct"
+        },
+        {
+          "id": "b",
+          "text": "The source was verified"
+        },
+        {
+          "id": "c",
+          "text": "The structure conforms, but the factual value still needs checking"
+        },
+        {
+          "id": "d",
+          "text": "The model consulted a current database"
+        }
+      ],
+      "correctOptionId": "c",
+      "explanation": "A schema constrains structure; it does not verify the truth of field values.",
+      "reference": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "title": "Structured model outputs",
+        "locator": "JSON mode; handling mistakes; refusals",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "af-structured-outputs-0003",
+      "topicId": "ai-foundations-structured-outputs",
+      "conceptId": "structured-outputs.exception-handling",
+      "difficulty": "hard",
+      "prompt": "A provider documents a refusal response outside the requested schema. What should the client check before treating the response as normal structured data?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whether the field names are alphabetized"
+        },
+        {
+          "id": "b",
+          "text": "Whether the output is short"
+        },
+        {
+          "id": "c",
+          "text": "Whether the prompt includes examples"
+        },
+        {
+          "id": "d",
+          "text": "Whether the documented refusal condition occurred"
+        }
+      ],
+      "correctOptionId": "d",
+      "explanation": "Handle the documented refusal branch before assuming the normal schema-shaped result exists.",
+      "reference": {
+        "url": "https://developers.openai.com/api/docs/guides/structured-outputs",
+        "title": "Structured model outputs",
+        "locator": "JSON mode; handling mistakes; refusals",
+        "checkedOn": "2026-10-07"
+      },
+      "bankVersion": "sample-0.1",
+      "reviewStatus": "approved",
+      "review": {
+        "author": "Codex",
+        "checks": [
+          "structure",
+          "answer rationale",
+          "distinctness",
+          "source alignment"
+        ],
+        "checkedOn": "2026-10-07",
+        "approvedBy": "project owner",
+        "approvedOn": "2026-10-07"
+      }
+    }
+  ]
+}

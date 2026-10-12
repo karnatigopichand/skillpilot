@@ -1,0 +1,691 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-08.1",
+  "lessons": [
+    {
+      "id": "stage-05-multi-agent-lesson",
+      "stageId": "stage-05",
+      "topicId": "stage-05-multi-agent",
+      "title": "Multi-Agent Systems",
+      "summary": "Understand multi-agent systems by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-05-multi-agent.1",
+        "stage-05-multi-agent.2",
+        "stage-05-multi-agent.3",
+        "stage-05-multi-agent.4",
+        "stage-05-multi-agent.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Roles",
+          "conceptIds": [
+            "stage-05-multi-agent.1"
+          ],
+          "paragraphs": [
+            "Coordinator: Assigns and integrates work under an overall goal.",
+            "Specialist: Handles a bounded domain or subtask.",
+            "Reviewer: Checks outputs against explicit criteria.",
+            "Shared service: Provides a common capability without becoming an independent decision-maker."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Coordination",
+          "conceptIds": [
+            "stage-05-multi-agent.2"
+          ],
+          "paragraphs": [
+            "Delegation: Assigns a task with scope and expected output.",
+            "Handoff: Transfers responsibility and necessary context.",
+            "Aggregation: Combines compatible outputs into a result.",
+            "Conflict resolution: Handles incompatible findings explicitly."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Communication",
+          "conceptIds": [
+            "stage-05-multi-agent.3"
+          ],
+          "paragraphs": [
+            "Task contract: Defines input, scope and success criteria.",
+            "Message provenance: Records which participant produced a claim.",
+            "Shared state rule: Specifies how updates are validated and combined.",
+            "Context selection: Supplies only relevant information within budget."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Risk controls",
+          "conceptIds": [
+            "stage-05-multi-agent.4"
+          ],
+          "paragraphs": [
+            "Permission isolation: Each worker receives only necessary access.",
+            "Budget allocation: Bounds total and per-worker resource use.",
+            "Loop detection: Identifies repeated delegation without progress.",
+            "Independent validation: Uses evidence beyond agents agreeing with one another."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Design evaluation",
+          "conceptIds": [
+            "stage-05-multi-agent.5"
+          ],
+          "paragraphs": [
+            "Single-agent baseline: Measures whether simpler execution already meets the need.",
+            "Parallel benefit: Independent work can reduce elapsed time when coordination cost is justified.",
+            "Coordination overhead: Communication and integration add latency and cost.",
+            "End-to-end evaluation: Measures the final task outcome rather than only individual worker quality."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Roles: a worked decision",
+          "scenario": "Divide a research task and combine results?",
+          "walkthrough": "Choose Coordinator. Assigns and integrates work under an overall goal.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Coordination: a worked decision",
+          "scenario": "Request a bounded evidence search from one worker?",
+          "walkthrough": "Choose Delegation. Assigns a task with scope and expected output.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Communication: a worked decision",
+          "scenario": "Specify a worker's required evidence and output format?",
+          "walkthrough": "Choose Task contract. Defines input, scope and success criteria.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Risk controls: a worked decision",
+          "scenario": "Give a research worker read-only access?",
+          "walkthrough": "Choose Permission isolation. Each worker receives only necessary access.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Design evaluation: a worked decision",
+          "scenario": "Test a simpler agent before adding a team?",
+          "walkthrough": "Choose Single-agent baseline. Measures whether simpler execution already meets the need.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Roles: distinguish Coordinator, Specialist, Reviewer, Shared service.",
+        "Coordination: distinguish Delegation, Handoff, Aggregation, Conflict resolution.",
+        "Communication: distinguish Task contract, Message provenance, Shared state rule, Context selection.",
+        "Risk controls: distinguish Permission isolation, Budget allocation, Loop detection, Independent validation.",
+        "Design evaluation: distinguish Single-agent baseline, Parallel benefit, Coordination overhead, End-to-end evaluation."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Multi-Agent Systems: primary documentation",
+          "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+        }
+      ]
+    },
+    {
+      "id": "stage-05-fine-tuning-lesson",
+      "stageId": "stage-05",
+      "topicId": "stage-05-fine-tuning",
+      "title": "Fine-Tuning",
+      "summary": "Understand fine-tuning by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-05-fine-tuning.1",
+        "stage-05-fine-tuning.2",
+        "stage-05-fine-tuning.3",
+        "stage-05-fine-tuning.4",
+        "stage-05-fine-tuning.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Adaptation choices",
+          "conceptIds": [
+            "stage-05-fine-tuning.1"
+          ],
+          "paragraphs": [
+            "Prompting: Changes supplied instructions without updating model weights.",
+            "Retrieval: Supplies external evidence at inference time.",
+            "Fine-tuning: Updates learned parameters using a training objective.",
+            "Evaluation: Measures behavior on held-out representative cases."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Dataset partitions",
+          "conceptIds": [
+            "stage-05-fine-tuning.2"
+          ],
+          "paragraphs": [
+            "Training set: Provides examples used to update weights.",
+            "Validation set: Supports tuning choices without becoming the final unbiased test.",
+            "Test set: Measures final performance on held-out examples.",
+            "Leakage: Information from evaluation cases contaminates training or selection."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Training signals",
+          "conceptIds": [
+            "stage-05-fine-tuning.3"
+          ],
+          "paragraphs": [
+            "Loss: Quantifies error under the selected objective.",
+            "Gradient: Indicates parameter sensitivity to the objective.",
+            "Learning rate: Controls update step size.",
+            "Epoch: Represents a pass through the training dataset."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Generalization",
+          "conceptIds": [
+            "stage-05-fine-tuning.4"
+          ],
+          "paragraphs": [
+            "Overfitting: Training improves while unseen-case performance deteriorates.",
+            "Underfitting: The model fails to learn sufficient task structure.",
+            "Distribution shift: Deployment inputs differ materially from training data.",
+            "Catastrophic forgetting: Adaptation degrades previously useful learned behavior."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Release checks",
+          "conceptIds": [
+            "stage-05-fine-tuning.5"
+          ],
+          "paragraphs": [
+            "Task benchmark: Measures the intended behavior against a baseline.",
+            "Safety regression: Tests whether adaptation harms important restrictions.",
+            "Data provenance: Records sources, permissions and preparation of examples.",
+            "Model artifact record: Records base model, configuration and resulting checkpoint."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Adaptation choices: a worked decision",
+          "scenario": "Clarify response format with instructions only?",
+          "walkthrough": "Choose Prompting. Changes supplied instructions without updating model weights.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Dataset partitions: a worked decision",
+          "scenario": "Compute gradients on examples during optimization?",
+          "walkthrough": "Choose Training set. Provides examples used to update weights.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Training signals: a worked decision",
+          "scenario": "Measure objective error for a batch?",
+          "walkthrough": "Choose Loss. Quantifies error under the selected objective.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Generalization: a worked decision",
+          "scenario": "Training accuracy rises while validation accuracy falls?",
+          "walkthrough": "Choose Overfitting. Training improves while unseen-case performance deteriorates.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Release checks: a worked decision",
+          "scenario": "Confirm fine-tuning improves the actual task?",
+          "walkthrough": "Choose Task benchmark. Measures the intended behavior against a baseline.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Adaptation choices: distinguish Prompting, Retrieval, Fine-tuning, Evaluation.",
+        "Dataset partitions: distinguish Training set, Validation set, Test set, Leakage.",
+        "Training signals: distinguish Loss, Gradient, Learning rate, Epoch.",
+        "Generalization: distinguish Overfitting, Underfitting, Distribution shift, Catastrophic forgetting.",
+        "Release checks: distinguish Task benchmark, Safety regression, Data provenance, Model artifact record."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Fine-Tuning: primary documentation",
+          "url": "https://huggingface.co/docs/transformers/training"
+        }
+      ]
+    },
+    {
+      "id": "stage-05-lora-lesson",
+      "stageId": "stage-05",
+      "topicId": "stage-05-lora",
+      "title": "LoRA",
+      "summary": "Understand lora by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-05-lora.1",
+        "stage-05-lora.2",
+        "stage-05-lora.3",
+        "stage-05-lora.4",
+        "stage-05-lora.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Core mechanism",
+          "conceptIds": [
+            "stage-05-lora.1"
+          ],
+          "paragraphs": [
+            "Frozen base: Original model weights remain unchanged during adapter training.",
+            "Low-rank update: Trainable factors represent a constrained weight update.",
+            "Adapter: Stores task-specific learned parameters separately.",
+            "Full fine-tuning: Updates the selected original model parameters directly."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Configuration",
+          "conceptIds": [
+            "stage-05-lora.2"
+          ],
+          "paragraphs": [
+            "Rank: Controls the dimensional capacity of each low-rank update.",
+            "Scaling: Controls the contribution of the adapter update.",
+            "Target modules: Select where adapters are inserted.",
+            "Dropout: Randomly drops activations during training under the configured rule."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Resource use",
+          "conceptIds": [
+            "stage-05-lora.3"
+          ],
+          "paragraphs": [
+            "Trainable parameter saving: Fewer learned parameters reduce optimizer-state needs.",
+            "Base residency: The underlying model still consumes memory.",
+            "Activation cost: Intermediate training tensors still require memory.",
+            "Inference merge: Compatible adapter weights may be combined with base weights under supported conditions."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Compatibility",
+          "conceptIds": [
+            "stage-05-lora.4"
+          ],
+          "paragraphs": [
+            "Base identity: Use the exact compatible underlying model.",
+            "Module compatibility: Match the targeted architecture and layer names.",
+            "Adapter version: Record the learned parameter artifact being used.",
+            "Evaluation contract: Check task behavior after loading or merging."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Tradeoffs",
+          "conceptIds": [
+            "stage-05-lora.5"
+          ],
+          "paragraphs": [
+            "Capacity tradeoff: Lower rank can constrain adaptation expressiveness.",
+            "Task specificity: An adapter's gains are measured for its intended distribution.",
+            "Empirical comparison: Benchmark against alternatives instead of assuming superiority.",
+            "Permission review: The base and dataset still have applicable usage conditions."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Core mechanism: a worked decision",
+          "scenario": "Preserve original weights while training added factors?",
+          "walkthrough": "Choose Frozen base. Original model weights remain unchanged during adapter training.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Configuration: a worked decision",
+          "scenario": "Choose how many low-rank directions can be learned?",
+          "walkthrough": "Choose Rank. Controls the dimensional capacity of each low-rank update.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Resource use: a worked decision",
+          "scenario": "Explain why adapter optimizer state can be smaller?",
+          "walkthrough": "Choose Trainable parameter saving. Fewer learned parameters reduce optimizer-state needs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Compatibility: a worked decision",
+          "scenario": "An adapter trained on one base is applied to an unrelated model. What check failed?",
+          "walkthrough": "Choose Base identity. Use the exact compatible underlying model.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Tradeoffs: a worked decision",
+          "scenario": "Very low rank fails to capture needed task changes. What concern fits?",
+          "walkthrough": "Choose Capacity tradeoff. Lower rank can constrain adaptation expressiveness.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Core mechanism: distinguish Frozen base, Low-rank update, Adapter, Full fine-tuning.",
+        "Configuration: distinguish Rank, Scaling, Target modules, Dropout.",
+        "Resource use: distinguish Trainable parameter saving, Base residency, Activation cost, Inference merge.",
+        "Compatibility: distinguish Base identity, Module compatibility, Adapter version, Evaluation contract.",
+        "Tradeoffs: distinguish Capacity tradeoff, Task specificity, Empirical comparison, Permission review."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "LoRA: primary documentation",
+          "url": "https://huggingface.co/docs/peft/main/en/conceptual_guides/lora"
+        }
+      ]
+    },
+    {
+      "id": "stage-05-qlora-lesson",
+      "stageId": "stage-05",
+      "topicId": "stage-05-qlora",
+      "title": "QLoRA",
+      "summary": "Understand qlora by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-05-qlora.1",
+        "stage-05-qlora.2",
+        "stage-05-qlora.3",
+        "stage-05-qlora.4",
+        "stage-05-qlora.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Components",
+          "conceptIds": [
+            "stage-05-qlora.1"
+          ],
+          "paragraphs": [
+            "Quantized base: Stores frozen base weights in a lower-bit representation.",
+            "LoRA factors: Trainable low-rank parameters adapt the model.",
+            "Quantization configuration: Specifies weight representation and associated settings.",
+            "Compute dtype: Controls arithmetic precision rather than merely stored weight width."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Paper techniques",
+          "conceptIds": [
+            "stage-05-qlora.2"
+          ],
+          "paragraphs": [
+            "NF4: A four-bit format designed around normally distributed weights.",
+            "Double quantization: Quantizes quantization constants to reduce memory overhead.",
+            "Paged optimizer: Uses memory-management techniques to handle optimizer memory spikes.",
+            "Low-rank adaptation: Trains smaller factors rather than all original parameters."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Memory boundaries",
+          "conceptIds": [
+            "stage-05-qlora.3"
+          ],
+          "paragraphs": [
+            "Weight storage: Memory used to hold model parameters.",
+            "Optimizer state: Memory used for training optimizer bookkeeping.",
+            "Activations: Memory used for intermediate tensors during training.",
+            "Runtime workspace: Additional memory required by kernels and execution."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Compatibility",
+          "conceptIds": [
+            "stage-05-qlora.4"
+          ],
+          "paragraphs": [
+            "Hardware support: The runtime must support required low-bit operations.",
+            "Base match: Adapters must match the underlying model architecture and identity.",
+            "Dtype support: Chosen arithmetic precision must be supported by the environment.",
+            "Artifact metadata: Record model, adapter and quantization settings together."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Claims and evaluation",
+          "conceptIds": [
+            "stage-05-qlora.5"
+          ],
+          "paragraphs": [
+            "Measured quality: Evaluate adapted outputs on held-out task cases.",
+            "Resource measurement: Measure actual memory and execution cost.",
+            "Scope limitation: A method's reported results do not guarantee all models and tasks.",
+            "Deployment verification: Test the intended serving configuration after training."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Components: a worked decision",
+          "scenario": "Reduce the storage size of frozen base parameters?",
+          "walkthrough": "Choose Quantized base. Stores frozen base weights in a lower-bit representation.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Paper techniques: a worked decision",
+          "scenario": "Which named four-bit representation is introduced for normally distributed weights?",
+          "walkthrough": "Choose NF4. A four-bit format designed around normally distributed weights.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Memory boundaries: a worked decision",
+          "scenario": "Estimate memory for compressed parameter values?",
+          "walkthrough": "Choose Weight storage. Memory used to hold model parameters.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Compatibility: a worked decision",
+          "scenario": "A low-bit kernel is unavailable on the target device. What concern fits?",
+          "walkthrough": "Choose Hardware support. The runtime must support required low-bit operations.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Claims and evaluation: a worked decision",
+          "scenario": "Check whether task answers improved after adaptation?",
+          "walkthrough": "Choose Measured quality. Evaluate adapted outputs on held-out task cases.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Components: distinguish Quantized base, LoRA factors, Quantization configuration, Compute dtype.",
+        "Paper techniques: distinguish NF4, Double quantization, Paged optimizer, Low-rank adaptation.",
+        "Memory boundaries: distinguish Weight storage, Optimizer state, Activations, Runtime workspace.",
+        "Compatibility: distinguish Hardware support, Base match, Dtype support, Artifact metadata.",
+        "Claims and evaluation: distinguish Measured quality, Resource measurement, Scope limitation, Deployment verification."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "QLoRA: primary documentation",
+          "url": "https://arxiv.org/abs/2305.14314"
+        }
+      ]
+    },
+    {
+      "id": "stage-05-local-models-lesson",
+      "stageId": "stage-05",
+      "topicId": "stage-05-local-models",
+      "title": "Local Models",
+      "summary": "Understand local models by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-05-local-models.1",
+        "stage-05-local-models.2",
+        "stage-05-local-models.3",
+        "stage-05-local-models.4",
+        "stage-05-local-models.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Deployment choices",
+          "conceptIds": [
+            "stage-05-local-models.1"
+          ],
+          "paragraphs": [
+            "Local inference: Runs model computation on infrastructure under the operator's control.",
+            "Hosted API: Uses a remote service for model execution.",
+            "Model weights: Parameters must be obtained and loaded for local execution.",
+            "Runtime: Software executes the model on supported hardware."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Memory planning",
+          "conceptIds": [
+            "stage-05-local-models.2"
+          ],
+          "paragraphs": [
+            "Weight memory: Stores the loaded model parameters.",
+            "KV cache: Retains attention-related state for active token sequences.",
+            "Batch memory: Concurrent sequences increase runtime state needs.",
+            "Headroom: Reserve additional capacity for execution and nonmodel processes."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Optimization",
+          "conceptIds": [
+            "stage-05-local-models.3"
+          ],
+          "paragraphs": [
+            "Quantization: Uses lower-precision parameter representations with possible quality tradeoffs.",
+            "Batching: Groups compatible requests to improve resource utilization.",
+            "Offloading: Moves some data or computation between available devices.",
+            "Context control: Limits active input/history to manage costs and capacity."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Trust and permissions",
+          "conceptIds": [
+            "stage-05-local-models.4"
+          ],
+          "paragraphs": [
+            "License check: Determine permitted model uses and redistribution conditions.",
+            "Artifact provenance: Verify the origin and integrity of downloaded model files.",
+            "Data handling: Control logs and storage even when inference is local.",
+            "Network boundary: Inspect telemetry, downloads and integrations rather than assume offline operation."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Serving evaluation",
+          "conceptIds": [
+            "stage-05-local-models.5"
+          ],
+          "paragraphs": [
+            "Quality benchmark: Measures task performance with representative inputs.",
+            "Latency: Measures response time including token generation.",
+            "Throughput: Measures completed work per unit time under load.",
+            "Reliability: Measures failed requests and stable operation over time."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Deployment choices: a worked decision",
+          "scenario": "Generate on the learner's own controlled machine?",
+          "walkthrough": "Choose Local inference. Runs model computation on infrastructure under the operator's control.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Memory planning: a worked decision",
+          "scenario": "Estimate parameter storage from count and representation width?",
+          "walkthrough": "Choose Weight memory. Stores the loaded model parameters.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Optimization: a worked decision",
+          "scenario": "Reduce parameter footprint with lower-bit storage?",
+          "walkthrough": "Choose Quantization. Uses lower-precision parameter representations with possible quality tradeoffs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Trust and permissions: a worked decision",
+          "scenario": "Confirm commercial use is allowed before deployment?",
+          "walkthrough": "Choose License check. Determine permitted model uses and redistribution conditions.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Serving evaluation: a worked decision",
+          "scenario": "Check whether a local model answers the actual task correctly?",
+          "walkthrough": "Choose Quality benchmark. Measures task performance with representative inputs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Deployment choices: distinguish Local inference, Hosted API, Model weights, Runtime.",
+        "Memory planning: distinguish Weight memory, KV cache, Batch memory, Headroom.",
+        "Optimization: distinguish Quantization, Batching, Offloading, Context control.",
+        "Trust and permissions: distinguish License check, Artifact provenance, Data handling, Network boundary.",
+        "Serving evaluation: distinguish Quality benchmark, Latency, Throughput, Reliability."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Local Models: primary documentation",
+          "url": "https://huggingface.co/docs/transformers/en/quantization/overview"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,691 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-08.1",
+  "lessons": [
+    {
+      "id": "stage-03-embeddings-lesson",
+      "stageId": "stage-03",
+      "topicId": "stage-03-embeddings",
+      "title": "Embeddings",
+      "summary": "Understand embeddings by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-03-embeddings.1",
+        "stage-03-embeddings.2",
+        "stage-03-embeddings.3",
+        "stage-03-embeddings.4",
+        "stage-03-embeddings.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Representation",
+          "conceptIds": [
+            "stage-03-embeddings.1"
+          ],
+          "paragraphs": [
+            "Dense vector: A numerical representation supports learned similarity comparisons.",
+            "Token ID: An integer identifies a vocabulary item rather than its semantic meaning.",
+            "Similarity score: A comparison estimates closeness under a selected metric.",
+            "Document text: The original content remains necessary for grounded answers."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Distance metrics",
+          "conceptIds": [
+            "stage-03-embeddings.2"
+          ],
+          "paragraphs": [
+            "Cosine similarity: Compares direction using normalized dot products.",
+            "Dot product: Includes magnitude unless vectors are normalized.",
+            "Euclidean distance: Measures straight-line distance between vectors.",
+            "Normalization: Rescales vectors, often to unit length."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Compatibility",
+          "conceptIds": [
+            "stage-03-embeddings.3"
+          ],
+          "paragraphs": [
+            "Same embedding space: Query and document vectors must use compatible encoding conventions.",
+            "Dimension check: Reject vectors with lengths different from the index contract.",
+            "Re-embedding: Recompute stored vectors when adopting an incompatible encoder.",
+            "Model version record: Record encoder identity so representations can be reproduced."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Use cases",
+          "conceptIds": [
+            "stage-03-embeddings.4"
+          ],
+          "paragraphs": [
+            "Semantic retrieval: Ranks content by learned meaning rather than exact wording.",
+            "Clustering: Groups similar representations without assigning known class labels.",
+            "Classification: Assigns labels using an explicit model or decision rule.",
+            "Deduplication: Identifies sufficiently similar items under a chosen policy."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Validation",
+          "conceptIds": [
+            "stage-03-embeddings.5"
+          ],
+          "paragraphs": [
+            "Retrieval evaluation: Measure relevance on representative queries and labelled evidence.",
+            "Privacy control: Restrict storage and access because embeddings are not guaranteed anonymous.",
+            "Domain testing: Check performance on the actual language and subject distribution.",
+            "Threshold calibration: Choose cutoffs using measured errors rather than universal constants."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Representation: a worked decision",
+          "scenario": "Represent sentence meaning for semantic search?",
+          "walkthrough": "Choose Dense vector. A numerical representation supports learned similarity comparisons.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Distance metrics: a worked decision",
+          "scenario": "Compare directions while ignoring length?",
+          "walkthrough": "Choose Cosine similarity. Compares direction using normalized dot products.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Compatibility: a worked decision",
+          "scenario": "Why must two independently trained encoders not be mixed merely because dimensions match?",
+          "walkthrough": "Choose Same embedding space. Query and document vectors must use compatible encoding conventions.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Use cases: a worked decision",
+          "scenario": "Find refund instructions when a query says money back?",
+          "walkthrough": "Choose Semantic retrieval. Ranks content by learned meaning rather than exact wording.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Validation: a worked decision",
+          "scenario": "Verify whether relevant documents occur among top results?",
+          "walkthrough": "Choose Retrieval evaluation. Measure relevance on representative queries and labelled evidence.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Representation: distinguish Dense vector, Token ID, Similarity score, Document text.",
+        "Distance metrics: distinguish Cosine similarity, Dot product, Euclidean distance, Normalization.",
+        "Compatibility: distinguish Same embedding space, Dimension check, Re-embedding, Model version record.",
+        "Use cases: distinguish Semantic retrieval, Clustering, Classification, Deduplication.",
+        "Validation: distinguish Retrieval evaluation, Privacy control, Domain testing, Threshold calibration."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Embeddings: primary documentation",
+          "url": "https://platform.openai.com/docs/guides/embeddings"
+        }
+      ]
+    },
+    {
+      "id": "stage-03-chunking-lesson",
+      "stageId": "stage-03",
+      "topicId": "stage-03-chunking",
+      "title": "Chunking",
+      "summary": "Understand chunking by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-03-chunking.1",
+        "stage-03-chunking.2",
+        "stage-03-chunking.3",
+        "stage-03-chunking.4",
+        "stage-03-chunking.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Boundaries",
+          "conceptIds": [
+            "stage-03-chunking.1"
+          ],
+          "paragraphs": [
+            "Fixed-size splitting: Uses a configured size limit for each chunk.",
+            "Structural splitting: Uses headings, paragraphs or other document boundaries.",
+            "Semantic splitting: Uses meaning changes to choose boundaries.",
+            "Overlap: Repeats a limited boundary region between adjacent chunks."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Size tradeoffs",
+          "conceptIds": [
+            "stage-03-chunking.2"
+          ],
+          "paragraphs": [
+            "Small chunks: Improve granularity but may lose necessary surrounding context.",
+            "Large chunks: Retain broader context but may dilute relevance and consume more input.",
+            "Overlap cost: Duplicated text increases indexing and retrieval redundancy.",
+            "Context assembly: Selected evidence must still fit the answer model input budget."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Metadata",
+          "conceptIds": [
+            "stage-03-chunking.3"
+          ],
+          "paragraphs": [
+            "Source ID: Identifies the originating document.",
+            "Location: Records a page, section or span for attribution.",
+            "Access label: Carries permissions used to restrict retrieval.",
+            "Revision: Identifies the content version represented by a chunk."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Content integrity",
+          "conceptIds": [
+            "stage-03-chunking.4"
+          ],
+          "paragraphs": [
+            "Table preservation: Retain row/column relationships and relevant labels.",
+            "Heading context: Carry section identity into fragments that need it.",
+            "Code boundary: Avoid breaking a code example into uninterpretable pieces.",
+            "Text extraction check: Verify parsing before attempting to optimize splitting."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Evaluation",
+          "conceptIds": [
+            "stage-03-chunking.5"
+          ],
+          "paragraphs": [
+            "Boundary test: Check facts and dependencies spanning a split.",
+            "Retrieval test: Measure whether relevant chunks are returned.",
+            "Answer test: Check generated answers against source-supported expected outcomes.",
+            "Configuration record: Version splitting rules so experiments are reproducible."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Boundaries: a worked decision",
+          "scenario": "Divide content every configured token interval?",
+          "walkthrough": "Choose Fixed-size splitting. Uses a configured size limit for each chunk.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Size tradeoffs: a worked decision",
+          "scenario": "Retrieval pinpoints a sentence but omits its qualifying paragraph. Which tradeoff appears?",
+          "walkthrough": "Choose Small chunks. Improve granularity but may lose necessary surrounding context.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Metadata: a worked decision",
+          "scenario": "Group chunks belonging to the same original file?",
+          "walkthrough": "Choose Source ID. Identifies the originating document.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Content integrity: a worked decision",
+          "scenario": "Numeric cells lose their column meaning after splitting. What remedy fits?",
+          "walkthrough": "Choose Table preservation. Retain row/column relationships and relevant labels.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Evaluation: a worked decision",
+          "scenario": "Inspect whether a definition is separated from its qualifying sentence?",
+          "walkthrough": "Choose Boundary test. Check facts and dependencies spanning a split.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Boundaries: distinguish Fixed-size splitting, Structural splitting, Semantic splitting, Overlap.",
+        "Size tradeoffs: distinguish Small chunks, Large chunks, Overlap cost, Context assembly.",
+        "Metadata: distinguish Source ID, Location, Access label, Revision.",
+        "Content integrity: distinguish Table preservation, Heading context, Code boundary, Text extraction check.",
+        "Evaluation: distinguish Boundary test, Retrieval test, Answer test, Configuration record."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Chunking: primary documentation",
+          "url": "https://learn.microsoft.com/en-us/azure/search/vector-search-how-to-chunk-documents"
+        }
+      ]
+    },
+    {
+      "id": "stage-03-vector-databases-lesson",
+      "stageId": "stage-03",
+      "topicId": "stage-03-vector-databases",
+      "title": "Vector Databases",
+      "summary": "Understand vector databases by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-03-vector-databases.1",
+        "stage-03-vector-databases.2",
+        "stage-03-vector-databases.3",
+        "stage-03-vector-databases.4",
+        "stage-03-vector-databases.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Stored records",
+          "conceptIds": [
+            "stage-03-vector-databases.1"
+          ],
+          "paragraphs": [
+            "Vector: Supports similarity comparison in the index.",
+            "Payload: Stores associated metadata or content fields.",
+            "Point ID: Identifies an indexed record for update or deletion.",
+            "Collection: Defines a logical group with its vector configuration."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Search behavior",
+          "conceptIds": [
+            "stage-03-vector-databases.2"
+          ],
+          "paragraphs": [
+            "Exact search: Compares candidates without approximate index shortcuts.",
+            "Approximate search: Trades some retrieval recall for faster search.",
+            "Metadata filter: Restricts eligible records using payload conditions.",
+            "Top-k: Limits how many ranked candidates are returned."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Index maintenance",
+          "conceptIds": [
+            "stage-03-vector-databases.3"
+          ],
+          "paragraphs": [
+            "Upsert: Create or replace a record by its stable identity.",
+            "Delete: Remove indexed records no longer intended for retrieval.",
+            "Rebuild: Construct an index for an incompatible vector configuration.",
+            "Payload index: Accelerate supported filtering over selected metadata fields."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Correctness boundaries",
+          "conceptIds": [
+            "stage-03-vector-databases.4"
+          ],
+          "paragraphs": [
+            "Permission enforcement: Ensure retrieval never exposes records outside authorized scope.",
+            "Dimension compatibility: Match vectors to the configured size.",
+            "Metric alignment: Use a similarity metric appropriate to the embedding contract.",
+            "Freshness tracking: Track source changes and indexed revisions."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Operational measures",
+          "conceptIds": [
+            "stage-03-vector-databases.5"
+          ],
+          "paragraphs": [
+            "Recall: Measure how many relevant or reference neighbors are retrieved.",
+            "Latency: Measure search duration under representative load.",
+            "Capacity: Plan memory and storage for vectors, indexes and payloads.",
+            "Backup recovery: Validate restoration of data and configuration."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Stored records: a worked decision",
+          "scenario": "Store the learned numerical representation?",
+          "walkthrough": "Choose Vector. Supports similarity comparison in the index.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Search behavior: a worked decision",
+          "scenario": "Evaluate all eligible vector candidates for a baseline?",
+          "walkthrough": "Choose Exact search. Compares candidates without approximate index shortcuts.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Index maintenance: a worked decision",
+          "scenario": "Refresh a passage's vector while retaining its identity?",
+          "walkthrough": "Choose Upsert. Create or replace a record by its stable identity.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Correctness boundaries: a worked decision",
+          "scenario": "A nearest neighbor belongs to another customer. What boundary failed?",
+          "walkthrough": "Choose Permission enforcement. Ensure retrieval never exposes records outside authorized scope.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Operational measures: a worked decision",
+          "scenario": "Compare approximate results with an exact neighbor baseline?",
+          "walkthrough": "Choose Recall. Measure how many relevant or reference neighbors are retrieved.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Stored records: distinguish Vector, Payload, Point ID, Collection.",
+        "Search behavior: distinguish Exact search, Approximate search, Metadata filter, Top-k.",
+        "Index maintenance: distinguish Upsert, Delete, Rebuild, Payload index.",
+        "Correctness boundaries: distinguish Permission enforcement, Dimension compatibility, Metric alignment, Freshness tracking.",
+        "Operational measures: distinguish Recall, Latency, Capacity, Backup recovery."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Vector Databases: primary documentation",
+          "url": "https://qdrant.tech/documentation/search/filtering/"
+        }
+      ]
+    },
+    {
+      "id": "stage-03-rag-architecture-lesson",
+      "stageId": "stage-03",
+      "topicId": "stage-03-rag-architecture",
+      "title": "RAG Architecture",
+      "summary": "Understand rag architecture by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-03-rag-architecture.1",
+        "stage-03-rag-architecture.2",
+        "stage-03-rag-architecture.3",
+        "stage-03-rag-architecture.4",
+        "stage-03-rag-architecture.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Pipeline stages",
+          "conceptIds": [
+            "stage-03-rag-architecture.1"
+          ],
+          "paragraphs": [
+            "Ingestion: Extract and index source content before retrieval.",
+            "Retrieval: Find evidence relevant to a query within authorized scope.",
+            "Augmentation: Place selected evidence into the model request.",
+            "Generation: Produce an answer conditioned on the supplied input."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Failure isolation",
+          "conceptIds": [
+            "stage-03-rag-architecture.2"
+          ],
+          "paragraphs": [
+            "Extraction failure: Source content was parsed or indexed incorrectly.",
+            "Retrieval failure: Needed evidence exists but does not reach the selected context.",
+            "Generation failure: Available evidence is mishandled in the final answer.",
+            "Source gap: The indexed corpus does not contain the required information."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Grounding controls",
+          "conceptIds": [
+            "stage-03-rag-architecture.3"
+          ],
+          "paragraphs": [
+            "Attribution: Link claims to supporting source locations.",
+            "Abstention: Acknowledge insufficient evidence rather than fabricate an answer.",
+            "Trust boundary: Treat retrieved text as untrusted data, not application policy.",
+            "Access enforcement: Limit evidence to content the caller is authorized to read."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Design choices",
+          "conceptIds": [
+            "stage-03-rag-architecture.4"
+          ],
+          "paragraphs": [
+            "Retrieval augmentation: Supplies external evidence at request time.",
+            "Fine-tuning: Updates learned model parameters using training data.",
+            "Prompt-only baseline: Uses instructions and existing model behavior without an external retrieval step.",
+            "Caching: Reuses a suitable previous computation under freshness and authorization constraints."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Evaluation layers",
+          "conceptIds": [
+            "stage-03-rag-architecture.5"
+          ],
+          "paragraphs": [
+            "Retrieval relevance: Check whether selected passages support the query.",
+            "Answer faithfulness: Check claims against supplied evidence.",
+            "Task usefulness: Check whether the answer actually satisfies the user's need.",
+            "Operational quality: Measure cost, latency and reliability under load."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Pipeline stages: a worked decision",
+          "scenario": "Parse documents and build searchable records?",
+          "walkthrough": "Choose Ingestion. Extract and index source content before retrieval.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Failure isolation: a worked decision",
+          "scenario": "A PDF table becomes scrambled before indexing. What failure fits?",
+          "walkthrough": "Choose Extraction failure. Source content was parsed or indexed incorrectly.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Grounding controls: a worked decision",
+          "scenario": "Let a learner inspect the passage supporting a factual claim?",
+          "walkthrough": "Choose Attribution. Link claims to supporting source locations.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Design choices: a worked decision",
+          "scenario": "Answer from a frequently updated document corpus without training a new model?",
+          "walkthrough": "Choose Retrieval augmentation. Supplies external evidence at request time.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Evaluation layers: a worked decision",
+          "scenario": "Are relevant passages selected for the query?",
+          "walkthrough": "Choose Retrieval relevance. Check whether selected passages support the query.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Pipeline stages: distinguish Ingestion, Retrieval, Augmentation, Generation.",
+        "Failure isolation: distinguish Extraction failure, Retrieval failure, Generation failure, Source gap.",
+        "Grounding controls: distinguish Attribution, Abstention, Trust boundary, Access enforcement.",
+        "Design choices: distinguish Retrieval augmentation, Fine-tuning, Prompt-only baseline, Caching.",
+        "Evaluation layers: distinguish Retrieval relevance, Answer faithfulness, Task usefulness, Operational quality."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "RAG Architecture: primary documentation",
+          "url": "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview"
+        }
+      ]
+    },
+    {
+      "id": "stage-03-retrieval-strategies-lesson",
+      "stageId": "stage-03",
+      "topicId": "stage-03-retrieval-strategies",
+      "title": "Retrieval Strategies",
+      "summary": "Understand retrieval strategies by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-03-retrieval-strategies.1",
+        "stage-03-retrieval-strategies.2",
+        "stage-03-retrieval-strategies.3",
+        "stage-03-retrieval-strategies.4",
+        "stage-03-retrieval-strategies.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Search types",
+          "conceptIds": [
+            "stage-03-retrieval-strategies.1"
+          ],
+          "paragraphs": [
+            "Keyword search: Matches lexical terms and can preserve exact identifiers.",
+            "Dense search: Uses embedding similarity for semantic matches.",
+            "Hybrid search: Combines lexical and semantic candidate signals.",
+            "Metadata filtering: Restricts the eligible corpus by structured attributes."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Ranking refinement",
+          "conceptIds": [
+            "stage-03-retrieval-strategies.2"
+          ],
+          "paragraphs": [
+            "Reranking: Reorders retrieved candidates with a more focused relevance model.",
+            "Diversity selection: Reduces redundant results while retaining relevance.",
+            "Score fusion: Combines rankings or compatible signals from several retrievers.",
+            "Thresholding: Rejects candidates below a calibrated acceptance cutoff."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Query improvement",
+          "conceptIds": [
+            "stage-03-retrieval-strategies.3"
+          ],
+          "paragraphs": [
+            "Query rewrite: Reformulates the current question to improve retrieval.",
+            "Multi-query retrieval: Searches several complementary formulations.",
+            "Conversation resolution: Uses dialogue context to resolve references in the current query.",
+            "Query preservation: Retains critical identifiers and constraints during transformation."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Evaluation metrics",
+          "conceptIds": [
+            "stage-03-retrieval-strategies.4"
+          ],
+          "paragraphs": [
+            "Recall at k: Measures relevant-item coverage among k returned candidates.",
+            "Precision at k: Measures the fraction of returned top-k items that are relevant.",
+            "Mean reciprocal rank: Emphasizes the rank of the first relevant result.",
+            "NDCG: Measures ranking quality with graded relevance and positional discounting."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Evidence assembly",
+          "conceptIds": [
+            "stage-03-retrieval-strategies.5"
+          ],
+          "paragraphs": [
+            "Deduplication: Remove repeated candidate content before context assembly.",
+            "Parent expansion: Retrieve broader surrounding context for a useful small passage.",
+            "Budget allocation: Choose evidence that fits within remaining input capacity.",
+            "Permission check: Revalidate eligibility before exposing candidate content."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Search types: a worked decision",
+          "scenario": "Locate an exact error code appearing in a manual?",
+          "walkthrough": "Choose Keyword search. Matches lexical terms and can preserve exact identifiers.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Ranking refinement: a worked decision",
+          "scenario": "Use a cross-encoder on a small candidate set?",
+          "walkthrough": "Choose Reranking. Reorders retrieved candidates with a more focused relevance model.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Query improvement: a worked decision",
+          "scenario": "A vague request can be restated into a clearer search expression?",
+          "walkthrough": "Choose Query rewrite. Reformulates the current question to improve retrieval.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Evaluation metrics: a worked decision",
+          "scenario": "Measure what fraction of all labelled relevant documents appear in top ten?",
+          "walkthrough": "Choose Recall at k. Measures relevant-item coverage among k returned candidates.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Evidence assembly: a worked decision",
+          "scenario": "Two retrievers return the same passage. What step fits?",
+          "walkthrough": "Choose Deduplication. Remove repeated candidate content before context assembly.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Search types: distinguish Keyword search, Dense search, Hybrid search, Metadata filtering.",
+        "Ranking refinement: distinguish Reranking, Diversity selection, Score fusion, Thresholding.",
+        "Query improvement: distinguish Query rewrite, Multi-query retrieval, Conversation resolution, Query preservation.",
+        "Evaluation metrics: distinguish Recall at k, Precision at k, Mean reciprocal rank, NDCG.",
+        "Evidence assembly: distinguish Deduplication, Parent expansion, Budget allocation, Permission check."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Retrieval Strategies: primary documentation",
+          "url": "https://docs.langchain.com/oss/python/langchain/retrieval"
+        }
+      ]
+    }
+  ]
+}

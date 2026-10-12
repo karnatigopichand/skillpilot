@@ -1,0 +1,848 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-08.1",
+  "lessons": [
+    {
+      "id": "stage-06-evaluations-lesson",
+      "stageId": "stage-06",
+      "topicId": "stage-06-evaluations",
+      "title": "Evaluations",
+      "summary": "Understand evaluations by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-06-evaluations.1",
+        "stage-06-evaluations.2",
+        "stage-06-evaluations.3",
+        "stage-06-evaluations.4",
+        "stage-06-evaluations.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Targets",
+          "conceptIds": [
+            "stage-06-evaluations.1"
+          ],
+          "paragraphs": [
+            "Task quality: Checks whether outputs satisfy the intended user goal.",
+            "Grounding: Checks factual claims against supplied evidence.",
+            "Safety: Checks restricted or harmful behavior under the applicable policy.",
+            "Operational performance: Checks latency, cost and reliability."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Datasets",
+          "conceptIds": [
+            "stage-06-evaluations.2"
+          ],
+          "paragraphs": [
+            "Representative cases: Reflect real intended tasks and input distribution.",
+            "Edge cases: Exercise boundary conditions and unusual valid inputs.",
+            "Adversarial cases: Probe behavior under deliberately challenging or malicious inputs.",
+            "Held-out cases: Remain separate from tuning and development examples."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Judging",
+          "conceptIds": [
+            "stage-06-evaluations.3"
+          ],
+          "paragraphs": [
+            "Deterministic check: Uses explicit rules for properties such as schema or exact counts.",
+            "Human review: Applies informed judgement where nuance matters.",
+            "Model judge: Uses another model under a rubric and requires calibration.",
+            "Reference comparison: Compares outputs with expected answers or labelled evidence."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Experiment design",
+          "conceptIds": [
+            "stage-06-evaluations.4"
+          ],
+          "paragraphs": [
+            "Baseline: Provides a comparison before a change.",
+            "Controlled comparison: Changes the intended factor while holding relevant conditions consistent.",
+            "Repeated sampling: Accounts for nondeterministic output variation.",
+            "Segment analysis: Checks outcomes for important subgroups rather than only averages."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Release process",
+          "conceptIds": [
+            "stage-06-evaluations.5"
+          ],
+          "paragraphs": [
+            "Regression suite: Rechecks established behaviors after a change.",
+            "Release criterion: States the quality threshold needed before rollout.",
+            "Production monitoring: Tracks actual deployed behavior over time.",
+            "Rollback trigger: Defines when a release should be withdrawn."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Targets: a worked decision",
+          "scenario": "An answer is fluent but fails to answer the user question. What dimension failed?",
+          "walkthrough": "Choose Task quality. Checks whether outputs satisfy the intended user goal.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Datasets: a worked decision",
+          "scenario": "Test common learner requests from the intended workflow?",
+          "walkthrough": "Choose Representative cases. Reflect real intended tasks and input distribution.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Judging: a worked decision",
+          "scenario": "Validate a JSON enum and required fields?",
+          "walkthrough": "Choose Deterministic check. Uses explicit rules for properties such as schema or exact counts.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Experiment design: a worked decision",
+          "scenario": "Compare a new prompt with the previous released prompt?",
+          "walkthrough": "Choose Baseline. Provides a comparison before a change.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Release process: a worked decision",
+          "scenario": "Ensure a new model has not broken prior tasks?",
+          "walkthrough": "Choose Regression suite. Rechecks established behaviors after a change.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Targets: distinguish Task quality, Grounding, Safety, Operational performance.",
+        "Datasets: distinguish Representative cases, Edge cases, Adversarial cases, Held-out cases.",
+        "Judging: distinguish Deterministic check, Human review, Model judge, Reference comparison.",
+        "Experiment design: distinguish Baseline, Controlled comparison, Repeated sampling, Segment analysis.",
+        "Release process: distinguish Regression suite, Release criterion, Production monitoring, Rollback trigger."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Evaluations: primary documentation",
+          "url": "https://platform.openai.com/docs/guides/evaluation-best-practices"
+        }
+      ]
+    },
+    {
+      "id": "stage-06-observability-lesson",
+      "stageId": "stage-06",
+      "topicId": "stage-06-observability",
+      "title": "Observability",
+      "summary": "Understand observability by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-06-observability.1",
+        "stage-06-observability.2",
+        "stage-06-observability.3",
+        "stage-06-observability.4",
+        "stage-06-observability.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Signals",
+          "conceptIds": [
+            "stage-06-observability.1"
+          ],
+          "paragraphs": [
+            "Log: Records discrete events with contextual fields.",
+            "Metric: Aggregates numeric measurements over time.",
+            "Trace: Connects operations within an execution path.",
+            "Profile: Examines where runtime resources are consumed."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "User-facing measures",
+          "conceptIds": [
+            "stage-06-observability.2"
+          ],
+          "paragraphs": [
+            "Availability: Measures whether useful service is accessible.",
+            "Latency: Measures time required to respond.",
+            "Quality: Measures whether outcomes satisfy the intended task.",
+            "Cost: Measures resource consumption or spending for work performed."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Instrumentation",
+          "conceptIds": [
+            "stage-06-observability.3"
+          ],
+          "paragraphs": [
+            "Correlation: Connects events belonging to one logical request.",
+            "Structured fields: Make event data queryable consistently.",
+            "Context propagation: Carries execution identity across service boundaries.",
+            "Sampling: Records a selected subset under a deliberate policy."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Privacy and scale",
+          "conceptIds": [
+            "stage-06-observability.4"
+          ],
+          "paragraphs": [
+            "Redaction: Remove or mask sensitive telemetry fields.",
+            "Retention: Limit how long telemetry is stored.",
+            "Access control: Restrict who may read operational records.",
+            "Cardinality control: Avoid unbounded metric label combinations."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Operational action",
+          "conceptIds": [
+            "stage-06-observability.5"
+          ],
+          "paragraphs": [
+            "Alert: Notifies responsible operators of actionable conditions.",
+            "Dashboard: Displays trends and current measurements.",
+            "Runbook: Documents investigation and recovery steps.",
+            "Post-incident review: Examines causes and improvements after an incident."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Signals: a worked decision",
+          "scenario": "Record a validation failure with its request identifier?",
+          "walkthrough": "Choose Log. Records discrete events with contextual fields.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "User-facing measures: a worked decision",
+          "scenario": "Are learners able to complete requests?",
+          "walkthrough": "Choose Availability. Measures whether useful service is accessible.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Instrumentation: a worked decision",
+          "scenario": "Join a request's error with its earlier model call?",
+          "walkthrough": "Choose Correlation. Connects events belonging to one logical request.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Privacy and scale: a worked decision",
+          "scenario": "Mask credentials in request logs?",
+          "walkthrough": "Choose Redaction. Remove or mask sensitive telemetry fields.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Operational action: a worked decision",
+          "scenario": "Page an operator when a critical failure threshold is crossed?",
+          "walkthrough": "Choose Alert. Notifies responsible operators of actionable conditions.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Signals: distinguish Log, Metric, Trace, Profile.",
+        "User-facing measures: distinguish Availability, Latency, Quality, Cost.",
+        "Instrumentation: distinguish Correlation, Structured fields, Context propagation, Sampling.",
+        "Privacy and scale: distinguish Redaction, Retention, Access control, Cardinality control.",
+        "Operational action: distinguish Alert, Dashboard, Runbook, Post-incident review."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Observability: primary documentation",
+          "url": "https://opentelemetry.io/docs/concepts/observability-primer/"
+        }
+      ]
+    },
+    {
+      "id": "stage-06-tracing-lesson",
+      "stageId": "stage-06",
+      "topicId": "stage-06-tracing",
+      "title": "Tracing",
+      "summary": "Understand tracing by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-06-tracing.1",
+        "stage-06-tracing.2",
+        "stage-06-tracing.3",
+        "stage-06-tracing.4",
+        "stage-06-tracing.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Trace structure",
+          "conceptIds": [
+            "stage-06-tracing.1"
+          ],
+          "paragraphs": [
+            "Trace: Represents a connected execution across operations.",
+            "Span: Represents one operation with duration and attributes.",
+            "Parent relationship: Expresses causal nesting between operations.",
+            "Trace ID: Identifies the overall execution for correlation."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Propagation",
+          "conceptIds": [
+            "stage-06-tracing.2"
+          ],
+          "paragraphs": [
+            "Carrier: A transport structure holds propagated context.",
+            "Extraction: Reads incoming context into local execution.",
+            "Injection: Writes local context into an outgoing carrier.",
+            "Context: Holds execution association used by instrumentation."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Latency analysis",
+          "conceptIds": [
+            "stage-06-tracing.3"
+          ],
+          "paragraphs": [
+            "Critical path: Determines end-to-end duration through dependent operations.",
+            "Parallel overlap: Concurrent spans may overlap in elapsed time.",
+            "Queue delay: Time is spent waiting before processing begins.",
+            "Service duration: Time is spent executing an individual operation."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Attributes and events",
+          "conceptIds": [
+            "stage-06-tracing.4"
+          ],
+          "paragraphs": [
+            "Attribute: Stores a descriptive value on a span.",
+            "Event: Records a timestamped occurrence within a span.",
+            "Status: Represents operation success/error classification under the convention.",
+            "Link: Associates related contexts beyond a single parent-child relation."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Trace management",
+          "conceptIds": [
+            "stage-06-tracing.5"
+          ],
+          "paragraphs": [
+            "Sampling policy: Chooses which executions are retained.",
+            "Redaction: Prevents sensitive payloads from entering traces.",
+            "Instrumentation coverage: Ensures important boundaries produce usable spans.",
+            "Trace review: Inspects recorded behavior to investigate a specific run."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Trace structure: a worked decision",
+          "scenario": "Follow an entire request through retrieval and model generation?",
+          "walkthrough": "Choose Trace. Represents a connected execution across operations.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Propagation: a worked decision",
+          "scenario": "HTTP headers carry tracing information. What role do they play?",
+          "walkthrough": "Choose Carrier. A transport structure holds propagated context.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Latency analysis: a worked decision",
+          "scenario": "Find dependent steps that dominate total response time?",
+          "walkthrough": "Choose Critical path. Determines end-to-end duration through dependent operations.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Attributes and events: a worked decision",
+          "scenario": "Record a model identifier on a call span?",
+          "walkthrough": "Choose Attribute. Stores a descriptive value on a span.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Trace management: a worked decision",
+          "scenario": "Retain only a deliberate subset of high-volume routine traffic?",
+          "walkthrough": "Choose Sampling policy. Chooses which executions are retained.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Trace structure: distinguish Trace, Span, Parent relationship, Trace ID.",
+        "Propagation: distinguish Carrier, Extraction, Injection, Context.",
+        "Latency analysis: distinguish Critical path, Parallel overlap, Queue delay, Service duration.",
+        "Attributes and events: distinguish Attribute, Event, Status, Link.",
+        "Trace management: distinguish Sampling policy, Redaction, Instrumentation coverage, Trace review."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Tracing: primary documentation",
+          "url": "https://opentelemetry.io/docs/concepts/signals/traces/"
+        }
+      ]
+    },
+    {
+      "id": "stage-06-guardrails-lesson",
+      "stageId": "stage-06",
+      "topicId": "stage-06-guardrails",
+      "title": "Guardrails",
+      "summary": "Understand guardrails by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-06-guardrails.1",
+        "stage-06-guardrails.2",
+        "stage-06-guardrails.3",
+        "stage-06-guardrails.4",
+        "stage-06-guardrails.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Control points",
+          "conceptIds": [
+            "stage-06-guardrails.1"
+          ],
+          "paragraphs": [
+            "Input check: Examines incoming user content before processing.",
+            "Retrieval check: Examines selected external evidence.",
+            "Output check: Examines the proposed answer before delivery.",
+            "Tool check: Validates permissions and arguments before effects."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Enforcement types",
+          "conceptIds": [
+            "stage-06-guardrails.2"
+          ],
+          "paragraphs": [
+            "Deterministic rule: Enforces explicit structural or business constraints.",
+            "Classifier: Estimates a category using a statistical model.",
+            "Human decision: Provides authorized judgement where needed.",
+            "Policy configuration: Defines which behaviors the application permits."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Failure policies",
+          "conceptIds": [
+            "stage-06-guardrails.3"
+          ],
+          "paragraphs": [
+            "Fail closed: Deny a protected operation when the needed control cannot validate it.",
+            "Safe fallback: Provide a permitted alternative instead of the blocked path.",
+            "Escalation: Transfer an unresolved decision to a responsible person.",
+            "Transparent explanation: Explain the available next step without revealing sensitive internal data."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Defense layers",
+          "conceptIds": [
+            "stage-06-guardrails.4"
+          ],
+          "paragraphs": [
+            "Separation: Keep instructions and untrusted data distinguishable.",
+            "Least privilege: Constrain tool and data access.",
+            "Validation: Check inputs and outputs at their actual boundaries.",
+            "Monitoring: Detect failures and attempted bypasses over time."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Guardrail evaluation",
+          "conceptIds": [
+            "stage-06-guardrails.5"
+          ],
+          "paragraphs": [
+            "False positive: A permitted request is wrongly blocked.",
+            "False negative: A prohibited request incorrectly passes.",
+            "Coverage gap: An untested or unenforced path bypasses controls.",
+            "Regression: A change worsens an established control behavior."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Control points: a worked decision",
+          "scenario": "Reject prohibited content before the model request?",
+          "walkthrough": "Choose Input check. Examines incoming user content before processing.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Enforcement types: a worked decision",
+          "scenario": "Reject a transfer above a fixed business maximum?",
+          "walkthrough": "Choose Deterministic rule. Enforces explicit structural or business constraints.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Failure policies: a worked decision",
+          "scenario": "Authorization cannot be verified for a private read. What default fits?",
+          "walkthrough": "Choose Fail closed. Deny a protected operation when the needed control cannot validate it.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Defense layers: a worked decision",
+          "scenario": "Prevent source documents from becoming application policy?",
+          "walkthrough": "Choose Separation. Keep instructions and untrusted data distinguishable.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Guardrail evaluation: a worked decision",
+          "scenario": "A harmless lesson question is rejected as unsafe. What error fits?",
+          "walkthrough": "Choose False positive. A permitted request is wrongly blocked.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Control points: distinguish Input check, Retrieval check, Output check, Tool check.",
+        "Enforcement types: distinguish Deterministic rule, Classifier, Human decision, Policy configuration.",
+        "Failure policies: distinguish Fail closed, Safe fallback, Escalation, Transparent explanation.",
+        "Defense layers: distinguish Separation, Least privilege, Validation, Monitoring.",
+        "Guardrail evaluation: distinguish False positive, False negative, Coverage gap, Regression."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Guardrails: primary documentation",
+          "url": "https://docs.nvidia.com/nemo-guardrails/index.html"
+        }
+      ]
+    },
+    {
+      "id": "stage-06-prompt-injection-lesson",
+      "stageId": "stage-06",
+      "topicId": "stage-06-prompt-injection",
+      "title": "Prompt Injection",
+      "summary": "Understand prompt injection by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-06-prompt-injection.1",
+        "stage-06-prompt-injection.2",
+        "stage-06-prompt-injection.3",
+        "stage-06-prompt-injection.4",
+        "stage-06-prompt-injection.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Attack surfaces",
+          "conceptIds": [
+            "stage-06-prompt-injection.1"
+          ],
+          "paragraphs": [
+            "Direct injection: Malicious instructions arrive in user-supplied interaction content.",
+            "Indirect injection: Malicious instructions arrive through retrieved or external content.",
+            "Tool-result injection: A returned tool observation attempts to redirect behavior.",
+            "Cross-boundary escalation: Lower-trust content attempts to acquire privileged authority."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Trust boundaries",
+          "conceptIds": [
+            "stage-06-prompt-injection.2"
+          ],
+          "paragraphs": [
+            "Application instruction: Defines trusted product behavior within the system's policy.",
+            "User request: Expresses a task subject to applicable authorization.",
+            "Retrieved data: Supplies evidence but cannot grant action permissions.",
+            "Tool permission: Must be enforced by trusted application code."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Mitigations",
+          "conceptIds": [
+            "stage-06-prompt-injection.3"
+          ],
+          "paragraphs": [
+            "Least privilege: Reduce possible harm through restricted capabilities.",
+            "Data separation: Keep external content distinct from trusted directives.",
+            "Human gate: Require authorized review for consequential unapproved actions.",
+            "Input/output checks: Inspect content and enforce valid contracts at boundaries."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Failure interpretation",
+          "conceptIds": [
+            "stage-06-prompt-injection.4"
+          ],
+          "paragraphs": [
+            "Residual risk: No single prompt or filter guarantees complete prevention.",
+            "Authorization breach: An action exceeds the caller's permitted rights.",
+            "Data disclosure: Sensitive information is exposed to an unauthorized recipient.",
+            "Integrity failure: An answer or action is manipulated away from its intended purpose."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Verification",
+          "conceptIds": [
+            "stage-06-prompt-injection.5"
+          ],
+          "paragraphs": [
+            "Adversarial test: Exercises attack content and expected containment.",
+            "Benign test: Checks that legitimate tasks still work.",
+            "Boundary test: Checks host-side prevention of unauthorized effects.",
+            "Incident review: Uses observed failures to improve controls."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Attack surfaces: a worked decision",
+          "scenario": "A user asks the model to ignore application rules. What surface fits?",
+          "walkthrough": "Choose Direct injection. Malicious instructions arrive in user-supplied interaction content.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Trust boundaries: a worked decision",
+          "scenario": "Who defines the product's intended response policy?",
+          "walkthrough": "Choose Application instruction. Defines trusted product behavior within the system's policy.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Mitigations: a worked decision",
+          "scenario": "Restrict a retrieval assistant to read-only resources?",
+          "walkthrough": "Choose Least privilege. Reduce possible harm through restricted capabilities.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Failure interpretation: a worked decision",
+          "scenario": "A strong warning prompt is assumed to block every future attack. What assumption is wrong?",
+          "walkthrough": "Choose Residual risk. No single prompt or filter guarantees complete prevention.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Verification: a worked decision",
+          "scenario": "Try malicious directions embedded in retrieved passages?",
+          "walkthrough": "Choose Adversarial test. Exercises attack content and expected containment.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Attack surfaces: distinguish Direct injection, Indirect injection, Tool-result injection, Cross-boundary escalation.",
+        "Trust boundaries: distinguish Application instruction, User request, Retrieved data, Tool permission.",
+        "Mitigations: distinguish Least privilege, Data separation, Human gate, Input/output checks.",
+        "Failure interpretation: distinguish Residual risk, Authorization breach, Data disclosure, Integrity failure.",
+        "Verification: distinguish Adversarial test, Benign test, Boundary test, Incident review."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Prompt Injection: primary documentation",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html"
+        }
+      ]
+    },
+    {
+      "id": "stage-06-security-lesson",
+      "stageId": "stage-06",
+      "topicId": "stage-06-security",
+      "title": "Security",
+      "summary": "Understand security by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-06-security.1",
+        "stage-06-security.2",
+        "stage-06-security.3",
+        "stage-06-security.4",
+        "stage-06-security.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Identity and access",
+          "conceptIds": [
+            "stage-06-security.1"
+          ],
+          "paragraphs": [
+            "Authentication: Establishes the caller's identity.",
+            "Authorization: Checks permitted operations and resources.",
+            "Least privilege: Limits access to what is necessary.",
+            "Tenant isolation: Separates each customer's data and execution scope."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Secret lifecycle",
+          "conceptIds": [
+            "stage-06-security.2"
+          ],
+          "paragraphs": [
+            "Secure storage: Keep credentials in controlled storage rather than committed code.",
+            "Rotation: Replace a credential deliberately with managed rollout.",
+            "Revocation: Disable compromised or no-longer-needed credentials.",
+            "Redaction: Prevent secrets from appearing in logs or user-visible output."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Input and execution",
+          "conceptIds": [
+            "stage-06-security.3"
+          ],
+          "paragraphs": [
+            "Schema validation: Checks allowed structure and types.",
+            "Semantic validation: Checks business constraints and resource meaning.",
+            "Allowlisted execution: Permits only registered supported operations.",
+            "Isolation: Contains untrusted processing in a constrained environment."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Data protection",
+          "conceptIds": [
+            "stage-06-security.4"
+          ],
+          "paragraphs": [
+            "Transport protection: Use validated encrypted channels for data in transit.",
+            "Storage protection: Protect retained sensitive data and its access.",
+            "Data minimization: Collect and retain only what the task needs.",
+            "Deletion policy: Define and carry out removal of retained data."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Response and assurance",
+          "conceptIds": [
+            "stage-06-security.5"
+          ],
+          "paragraphs": [
+            "Threat model: Identifies assets, actors, boundaries and possible failures.",
+            "Security test: Checks defenses against defined misuse cases.",
+            "Incident response: Contains and investigates an actual security event.",
+            "Patch management: Tracks and applies relevant dependency fixes."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Identity and access: a worked decision",
+          "scenario": "Verify a signed login token?",
+          "walkthrough": "Choose Authentication. Establishes the caller's identity.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Secret lifecycle: a worked decision",
+          "scenario": "Remove a provider key from a public frontend bundle?",
+          "walkthrough": "Choose Secure storage. Keep credentials in controlled storage rather than committed code.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Input and execution: a worked decision",
+          "scenario": "Reject unexpected fields in a strict request?",
+          "walkthrough": "Choose Schema validation. Checks allowed structure and types.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Data protection: a worked decision",
+          "scenario": "Prevent passive reading of network requests?",
+          "walkthrough": "Choose Transport protection. Use validated encrypted channels for data in transit.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Response and assurance: a worked decision",
+          "scenario": "Identify how a connected tool could expose private documents?",
+          "walkthrough": "Choose Threat model. Identifies assets, actors, boundaries and possible failures.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Identity and access: distinguish Authentication, Authorization, Least privilege, Tenant isolation.",
+        "Secret lifecycle: distinguish Secure storage, Rotation, Revocation, Redaction.",
+        "Input and execution: distinguish Schema validation, Semantic validation, Allowlisted execution, Isolation.",
+        "Data protection: distinguish Transport protection, Storage protection, Data minimization, Deletion policy.",
+        "Response and assurance: distinguish Threat model, Security test, Incident response, Patch management."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Security: Identity and access",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html"
+        },
+        {
+          "id": "primary-2",
+          "title": "Security: Secret lifecycle",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html"
+        },
+        {
+          "id": "primary-3",
+          "title": "Security: Input and execution",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html"
+        },
+        {
+          "id": "primary-4",
+          "title": "Security: Data protection",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/User_Privacy_Protection_Cheat_Sheet.html"
+        },
+        {
+          "id": "primary-5",
+          "title": "Security: Response and assurance",
+          "url": "https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html"
+        }
+      ]
+    }
+  ]
+}

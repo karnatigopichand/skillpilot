@@ -1,0 +1,1124 @@
+{
+  "status": "approved",
+  "difficultyTargets": {
+    "easy": 15,
+    "medium": 23,
+    "hard": 12
+  },
+  "topics": [
+    {
+      "topicId": "ai-foundations-generative-ai",
+      "concepts": [
+        {
+          "id": "generative-ai.task-types",
+          "targetQuestions": 10
+        },
+        {
+          "id": "generative-ai.distribution",
+          "targetQuestions": 10
+        },
+        {
+          "id": "generative-ai.modalities",
+          "targetQuestions": 10
+        },
+        {
+          "id": "generative-ai.training-inference",
+          "targetQuestions": 10
+        },
+        {
+          "id": "generative-ai.reliability",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "ai-foundations-llms",
+      "concepts": [
+        {
+          "id": "llms.prediction",
+          "targetQuestions": 10
+        },
+        {
+          "id": "llms.training-inference",
+          "targetQuestions": 10
+        },
+        {
+          "id": "llms.instruction-tuning",
+          "targetQuestions": 10
+        },
+        {
+          "id": "llms.sampling",
+          "targetQuestions": 10
+        },
+        {
+          "id": "llms.knowledge-limits",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "ai-foundations-tokens",
+      "concepts": [
+        {
+          "id": "tokens.segmentation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "tokens.counting",
+          "targetQuestions": 10
+        },
+        {
+          "id": "tokens.language-variation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "tokens.usage-budgets",
+          "targetQuestions": 10
+        },
+        {
+          "id": "tokens.text-composition",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "ai-foundations-context-windows",
+      "concepts": [
+        {
+          "id": "context-windows.budgeting",
+          "targetQuestions": 10
+        },
+        {
+          "id": "context-windows.history",
+          "targetQuestions": 10
+        },
+        {
+          "id": "context-windows.compaction",
+          "targetQuestions": 10
+        },
+        {
+          "id": "context-windows.memory-boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "context-windows.long-context-limits",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "ai-foundations-prompting",
+      "concepts": [
+        {
+          "id": "prompting.instructions",
+          "targetQuestions": 10
+        },
+        {
+          "id": "prompting.examples",
+          "targetQuestions": 10
+        },
+        {
+          "id": "prompting.context-selection",
+          "targetQuestions": 10
+        },
+        {
+          "id": "prompting.constraints",
+          "targetQuestions": 10
+        },
+        {
+          "id": "prompting.evaluation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "ai-foundations-structured-outputs",
+      "concepts": [
+        {
+          "id": "structured-outputs.syntax-schema",
+          "targetQuestions": 10
+        },
+        {
+          "id": "structured-outputs.semantic-validation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "structured-outputs.exception-handling",
+          "targetQuestions": 10
+        },
+        {
+          "id": "structured-outputs.missing-fields",
+          "targetQuestions": 10
+        },
+        {
+          "id": "structured-outputs.provider-guarantees",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-02-python",
+      "concepts": [
+        {
+          "id": "stage-02-python.1",
+          "title": "Data structures",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-python.2",
+          "title": "Control flow",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-python.3",
+          "title": "Functions and scope",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-python.4",
+          "title": "Errors and resources",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-python.5",
+          "title": "Iteration and copying",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-02-vibe-coding",
+      "concepts": [
+        {
+          "id": "stage-02-vibe-coding.1",
+          "title": "Change definition",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-vibe-coding.2",
+          "title": "Verification tools",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-vibe-coding.3",
+          "title": "Review evidence",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-vibe-coding.4",
+          "title": "Safe collaboration",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-vibe-coding.5",
+          "title": "Failure recovery",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-02-llm-apis",
+      "concepts": [
+        {
+          "id": "stage-02-llm-apis.1",
+          "title": "Request composition",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-llm-apis.2",
+          "title": "Response interpretation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-llm-apis.3",
+          "title": "Error handling",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-llm-apis.4",
+          "title": "Streaming",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-llm-apis.5",
+          "title": "Application boundaries",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-02-api-integration",
+      "concepts": [
+        {
+          "id": "stage-02-api-integration.1",
+          "title": "HTTP operations",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-api-integration.2",
+          "title": "Status categories",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-api-integration.3",
+          "title": "Identity and authority",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-api-integration.4",
+          "title": "Retry correctness",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-api-integration.5",
+          "title": "Data contracts",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-02-function-calling",
+      "concepts": [
+        {
+          "id": "stage-02-function-calling.1",
+          "title": "Tool lifecycle",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-function-calling.2",
+          "title": "Argument checks",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-function-calling.3",
+          "title": "Side effects",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-function-calling.4",
+          "title": "Result handling",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-02-function-calling.5",
+          "title": "Loop control",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-03-embeddings",
+      "concepts": [
+        {
+          "id": "stage-03-embeddings.1",
+          "title": "Representation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-embeddings.2",
+          "title": "Distance metrics",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-embeddings.3",
+          "title": "Compatibility",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-embeddings.4",
+          "title": "Use cases",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-embeddings.5",
+          "title": "Validation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-03-chunking",
+      "concepts": [
+        {
+          "id": "stage-03-chunking.1",
+          "title": "Boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-chunking.2",
+          "title": "Size tradeoffs",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-chunking.3",
+          "title": "Metadata",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-chunking.4",
+          "title": "Content integrity",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-chunking.5",
+          "title": "Evaluation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-03-vector-databases",
+      "concepts": [
+        {
+          "id": "stage-03-vector-databases.1",
+          "title": "Stored records",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-vector-databases.2",
+          "title": "Search behavior",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-vector-databases.3",
+          "title": "Index maintenance",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-vector-databases.4",
+          "title": "Correctness boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-vector-databases.5",
+          "title": "Operational measures",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-03-rag-architecture",
+      "concepts": [
+        {
+          "id": "stage-03-rag-architecture.1",
+          "title": "Pipeline stages",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-rag-architecture.2",
+          "title": "Failure isolation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-rag-architecture.3",
+          "title": "Grounding controls",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-rag-architecture.4",
+          "title": "Design choices",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-rag-architecture.5",
+          "title": "Evaluation layers",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-03-retrieval-strategies",
+      "concepts": [
+        {
+          "id": "stage-03-retrieval-strategies.1",
+          "title": "Search types",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-retrieval-strategies.2",
+          "title": "Ranking refinement",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-retrieval-strategies.3",
+          "title": "Query improvement",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-retrieval-strategies.4",
+          "title": "Evaluation metrics",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-03-retrieval-strategies.5",
+          "title": "Evidence assembly",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-agents",
+      "concepts": [
+        {
+          "id": "stage-04-agents.1",
+          "title": "Control patterns",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-agents.2",
+          "title": "Reasoning loop",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-agents.3",
+          "title": "State",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-agents.4",
+          "title": "Boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-agents.5",
+          "title": "Reliability",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-tool-calling",
+      "concepts": [
+        {
+          "id": "stage-04-tool-calling.1",
+          "title": "Discovery",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-tool-calling.2",
+          "title": "Execution",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-tool-calling.3",
+          "title": "Parallel operations",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-tool-calling.4",
+          "title": "External effects",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-tool-calling.5",
+          "title": "Returned content",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-mcp",
+      "concepts": [
+        {
+          "id": "stage-04-mcp.1",
+          "title": "Architecture",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-mcp.2",
+          "title": "Primitives",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-mcp.3",
+          "title": "Lifecycle",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-mcp.4",
+          "title": "Security",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-mcp.5",
+          "title": "Interoperability",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-langchain",
+      "concepts": [
+        {
+          "id": "stage-04-langchain.1",
+          "title": "Building blocks",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langchain.2",
+          "title": "Responsibility boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langchain.3",
+          "title": "Retrieval composition",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langchain.4",
+          "title": "Execution concerns",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langchain.5",
+          "title": "Maintenance",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-langgraph",
+      "concepts": [
+        {
+          "id": "stage-04-langgraph.1",
+          "title": "Graph structure",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langgraph.2",
+          "title": "Persistence",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langgraph.3",
+          "title": "Human decisions",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langgraph.4",
+          "title": "Concurrency",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-langgraph.5",
+          "title": "Durable execution",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-workflows",
+      "concepts": [
+        {
+          "id": "stage-04-workflows.1",
+          "title": "Patterns",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-workflows.2",
+          "title": "Contracts",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-workflows.3",
+          "title": "Failure policies",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-workflows.4",
+          "title": "Execution records",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-workflows.5",
+          "title": "Design tradeoffs",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-04-a2a",
+      "concepts": [
+        {
+          "id": "stage-04-a2a.1",
+          "title": "Entities",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-a2a.2",
+          "title": "Lifecycle",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-a2a.3",
+          "title": "Boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-a2a.4",
+          "title": "Asynchronous behavior",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-04-a2a.5",
+          "title": "Reliability and trust",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-05-multi-agent",
+      "concepts": [
+        {
+          "id": "stage-05-multi-agent.1",
+          "title": "Roles",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-multi-agent.2",
+          "title": "Coordination",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-multi-agent.3",
+          "title": "Communication",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-multi-agent.4",
+          "title": "Risk controls",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-multi-agent.5",
+          "title": "Design evaluation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-05-fine-tuning",
+      "concepts": [
+        {
+          "id": "stage-05-fine-tuning.1",
+          "title": "Adaptation choices",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-fine-tuning.2",
+          "title": "Dataset partitions",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-fine-tuning.3",
+          "title": "Training signals",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-fine-tuning.4",
+          "title": "Generalization",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-fine-tuning.5",
+          "title": "Release checks",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-05-lora",
+      "concepts": [
+        {
+          "id": "stage-05-lora.1",
+          "title": "Core mechanism",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-lora.2",
+          "title": "Configuration",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-lora.3",
+          "title": "Resource use",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-lora.4",
+          "title": "Compatibility",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-lora.5",
+          "title": "Tradeoffs",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-05-qlora",
+      "concepts": [
+        {
+          "id": "stage-05-qlora.1",
+          "title": "Components",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-qlora.2",
+          "title": "Paper techniques",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-qlora.3",
+          "title": "Memory boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-qlora.4",
+          "title": "Compatibility",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-qlora.5",
+          "title": "Claims and evaluation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-05-local-models",
+      "concepts": [
+        {
+          "id": "stage-05-local-models.1",
+          "title": "Deployment choices",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-local-models.2",
+          "title": "Memory planning",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-local-models.3",
+          "title": "Optimization",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-local-models.4",
+          "title": "Trust and permissions",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-05-local-models.5",
+          "title": "Serving evaluation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-06-evaluations",
+      "concepts": [
+        {
+          "id": "stage-06-evaluations.1",
+          "title": "Targets",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-evaluations.2",
+          "title": "Datasets",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-evaluations.3",
+          "title": "Judging",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-evaluations.4",
+          "title": "Experiment design",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-evaluations.5",
+          "title": "Release process",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-06-observability",
+      "concepts": [
+        {
+          "id": "stage-06-observability.1",
+          "title": "Signals",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-observability.2",
+          "title": "User-facing measures",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-observability.3",
+          "title": "Instrumentation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-observability.4",
+          "title": "Privacy and scale",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-observability.5",
+          "title": "Operational action",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-06-tracing",
+      "concepts": [
+        {
+          "id": "stage-06-tracing.1",
+          "title": "Trace structure",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-tracing.2",
+          "title": "Propagation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-tracing.3",
+          "title": "Latency analysis",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-tracing.4",
+          "title": "Attributes and events",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-tracing.5",
+          "title": "Trace management",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-06-guardrails",
+      "concepts": [
+        {
+          "id": "stage-06-guardrails.1",
+          "title": "Control points",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-guardrails.2",
+          "title": "Enforcement types",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-guardrails.3",
+          "title": "Failure policies",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-guardrails.4",
+          "title": "Defense layers",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-guardrails.5",
+          "title": "Guardrail evaluation",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-06-prompt-injection",
+      "concepts": [
+        {
+          "id": "stage-06-prompt-injection.1",
+          "title": "Attack surfaces",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-prompt-injection.2",
+          "title": "Trust boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-prompt-injection.3",
+          "title": "Mitigations",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-prompt-injection.4",
+          "title": "Failure interpretation",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-prompt-injection.5",
+          "title": "Verification",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-06-security",
+      "concepts": [
+        {
+          "id": "stage-06-security.1",
+          "title": "Identity and access",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-security.2",
+          "title": "Secret lifecycle",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-security.3",
+          "title": "Input and execution",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-security.4",
+          "title": "Data protection",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-06-security.5",
+          "title": "Response and assurance",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-07-architecture",
+      "concepts": [
+        {
+          "id": "stage-07-architecture.1",
+          "title": "Requirements",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-architecture.2",
+          "title": "Component boundaries",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-architecture.3",
+          "title": "Architecture decisions",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-architecture.4",
+          "title": "Reliability design",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-architecture.5",
+          "title": "Security and operations",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-07-technical-questions",
+      "concepts": [
+        {
+          "id": "stage-07-technical-questions.1",
+          "title": "Model concepts",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-technical-questions.2",
+          "title": "Retrieval concepts",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-technical-questions.3",
+          "title": "Agent concepts",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-technical-questions.4",
+          "title": "Adaptation concepts",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-technical-questions.5",
+          "title": "Evidence in answers",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-07-coding-concepts",
+      "concepts": [
+        {
+          "id": "stage-07-coding-concepts.1",
+          "title": "Complexity",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-coding-concepts.2",
+          "title": "Collections",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-coding-concepts.3",
+          "title": "Function design",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-coding-concepts.4",
+          "title": "Concurrency concepts",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-coding-concepts.5",
+          "title": "Testing",
+          "targetQuestions": 10
+        }
+      ]
+    },
+    {
+      "topicId": "stage-07-interview-practice",
+      "concepts": [
+        {
+          "id": "stage-07-interview-practice.1",
+          "title": "Clarification",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-interview-practice.2",
+          "title": "Answer structure",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-interview-practice.3",
+          "title": "Scenario reasoning",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-interview-practice.4",
+          "title": "Coding discussion",
+          "targetQuestions": 10
+        },
+        {
+          "id": "stage-07-interview-practice.5",
+          "title": "Readiness claims",
+          "targetQuestions": 10
+        }
+      ]
+    }
+  ],
+  "approvedOn": "2026-10-07",
+  "approvedBy": "project owner",
+  "releaseTargetPerTopic": 50,
+  "changeRecord": "Owner reduced target to 50 per topic and authorized full integration October 7, 2026; approved all-stage expansion October 8, 2026. New concept cells and scenarios are author-reviewed under that integration authorization. Topic attempts remain at most 20."
+}

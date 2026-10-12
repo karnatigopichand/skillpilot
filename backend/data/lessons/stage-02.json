@@ -1,0 +1,691 @@
+{
+  "schemaVersion": "1",
+  "contentVersion": "2026-10-08.1",
+  "lessons": [
+    {
+      "id": "stage-02-python-lesson",
+      "stageId": "stage-02",
+      "topicId": "stage-02-python",
+      "title": "Python Fundamentals",
+      "summary": "Understand python fundamentals by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-02-python.1",
+        "stage-02-python.2",
+        "stage-02-python.3",
+        "stage-02-python.4",
+        "stage-02-python.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Data structures",
+          "conceptIds": [
+            "stage-02-python.1"
+          ],
+          "paragraphs": [
+            "List: An ordered mutable sequence supports indexing and append.",
+            "Tuple: An ordered immutable sequence represents a fixed record.",
+            "Dictionary: A mapping associates unique hashable keys with values.",
+            "Set: An unordered collection of unique hashable elements supports membership and set operations."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Control flow",
+          "conceptIds": [
+            "stage-02-python.2"
+          ],
+          "paragraphs": [
+            "For loop: Iterates over items supplied by an iterable.",
+            "While loop: Repeats while a Boolean condition is true.",
+            "Break: Exits the nearest enclosing loop immediately.",
+            "Continue: Skips the rest of the current iteration and starts the next one."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Functions and scope",
+          "conceptIds": [
+            "stage-02-python.3"
+          ],
+          "paragraphs": [
+            "Return: Ends a function and supplies a result to its caller.",
+            "Parameter: A name in a function definition binds an incoming argument.",
+            "Local variable: A name assigned within a function normally belongs to its local scope.",
+            "Default argument: A value used when an argument is omitted is evaluated at definition time."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Errors and resources",
+          "conceptIds": [
+            "stage-02-python.4"
+          ],
+          "paragraphs": [
+            "Try/except: Handles an anticipated exception raised by an operation.",
+            "Finally: Runs cleanup on normal completion and when an exception leaves the try block.",
+            "With statement: Uses a context manager to enter and reliably release a resource.",
+            "Raise: Signals an exception explicitly rather than returning a misleading success value."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Iteration and copying",
+          "conceptIds": [
+            "stage-02-python.5"
+          ],
+          "paragraphs": [
+            "Generator: Produces values lazily and may be consumed only once.",
+            "List comprehension: Builds a new list by mapping or filtering an iterable.",
+            "Shallow copy: Creates a new outer container while retaining references to nested objects.",
+            "Deep copy: Recursively copies nested objects subject to their copying behavior."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Data structures: a worked decision",
+          "scenario": "Preserve insertion order while appending messages: which built-in fits?",
+          "walkthrough": "Choose List. An ordered mutable sequence supports indexing and append.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Control flow: a worked decision",
+          "scenario": "Visit every item in a list of requests: which control construct fits?",
+          "walkthrough": "Choose For loop. Iterates over items supplied by an iterable.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Functions and scope: a worked decision",
+          "scenario": "Give the computed token count back to the caller: which mechanism fits?",
+          "walkthrough": "Choose Return. Ends a function and supplies a result to its caller.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Errors and resources: a worked decision",
+          "scenario": "Handle ValueError from parsing a user-entered integer: which mechanism fits?",
+          "walkthrough": "Choose Try/except. Handles an anticipated exception raised by an operation.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Iteration and copying: a worked decision",
+          "scenario": "Stream a large sequence without materializing every item at once: which mechanism fits?",
+          "walkthrough": "Choose Generator. Produces values lazily and may be consumed only once.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Data structures: distinguish List, Tuple, Dictionary, Set.",
+        "Control flow: distinguish For loop, While loop, Break, Continue.",
+        "Functions and scope: distinguish Return, Parameter, Local variable, Default argument.",
+        "Errors and resources: distinguish Try/except, Finally, With statement, Raise.",
+        "Iteration and copying: distinguish Generator, List comprehension, Shallow copy, Deep copy."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Python Fundamentals: primary documentation",
+          "url": "https://docs.python.org/3/tutorial/"
+        }
+      ]
+    },
+    {
+      "id": "stage-02-vibe-coding-lesson",
+      "stageId": "stage-02",
+      "topicId": "stage-02-vibe-coding",
+      "title": "Vibe Coding",
+      "summary": "Understand vibe coding by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-02-vibe-coding.1",
+        "stage-02-vibe-coding.2",
+        "stage-02-vibe-coding.3",
+        "stage-02-vibe-coding.4",
+        "stage-02-vibe-coding.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Change definition",
+          "conceptIds": [
+            "stage-02-vibe-coding.1"
+          ],
+          "paragraphs": [
+            "Acceptance criterion: A concrete observable behavior defines whether the change succeeds.",
+            "Small change: A bounded diff makes review and fault isolation easier.",
+            "Repository context: Existing code and conventions constrain a useful generated proposal.",
+            "Out-of-scope boundary: Explicit exclusions prevent an assistant from expanding the task unintentionally."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Verification tools",
+          "conceptIds": [
+            "stage-02-vibe-coding.2"
+          ],
+          "paragraphs": [
+            "Unit test: Checks a bounded behavior with controlled inputs.",
+            "Integration test: Checks interactions across real component boundaries.",
+            "Type checker: Finds incompatible types without proving runtime correctness.",
+            "Manual visual review: Inspects appearance and user interactions that automated checks may miss."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Review evidence",
+          "conceptIds": [
+            "stage-02-vibe-coding.3"
+          ],
+          "paragraphs": [
+            "Diff inspection: Read the actual changed code and its consequences.",
+            "Requirement trace: Compare the final behavior against the requested contract.",
+            "Independent check: Use evidence beyond the assistant's claim that its own patch works.",
+            "Dependency verification: Confirm a proposed package exists, is appropriate and has acceptable provenance."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Safe collaboration",
+          "conceptIds": [
+            "stage-02-vibe-coding.4"
+          ],
+          "paragraphs": [
+            "Secret exclusion: Do not place credentials in prompts, generated code or committed examples.",
+            "Least privilege: Limit the assistant and generated app to necessary permissions.",
+            "Human authorization: A consequential external action requires an authorized decision.",
+            "Reversible checkpoint: Keep a recoverable state before accepting a substantial change."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Failure recovery",
+          "conceptIds": [
+            "stage-02-vibe-coding.5"
+          ],
+          "paragraphs": [
+            "Reproduce: Establish concrete steps and inputs that trigger the defect.",
+            "Root-cause analysis: Find the failed assumption rather than patching only the symptom.",
+            "Rollback: Restore a known working revision when a change must be removed.",
+            "Honest limitation: Report what is not verified rather than claiming unsupported success."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Change definition: a worked decision",
+          "scenario": "A prompt says make it better but gives no observable outcome. What should be added?",
+          "walkthrough": "Choose Acceptance criterion. A concrete observable behavior defines whether the change succeeds.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Verification tools: a worked decision",
+          "scenario": "Verify a percentage helper for zero and nonzero denominators: which check fits?",
+          "walkthrough": "Choose Unit test. Checks a bounded behavior with controlled inputs.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Review evidence: a worked decision",
+          "scenario": "The assistant says done, but a reviewer has not seen the changed lines. What review is needed?",
+          "walkthrough": "Choose Diff inspection. Read the actual changed code and its consequences.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Safe collaboration: a worked decision",
+          "scenario": "An API token appears in a proposed example config committed to source control. What practice was missed?",
+          "walkthrough": "Choose Secret exclusion. Do not place credentials in prompts, generated code or committed examples.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Failure recovery: a worked decision",
+          "scenario": "A bug report only says it sometimes breaks. What is the first useful investigation action?",
+          "walkthrough": "Choose Reproduce. Establish concrete steps and inputs that trigger the defect.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Change definition: distinguish Acceptance criterion, Small change, Repository context, Out-of-scope boundary.",
+        "Verification tools: distinguish Unit test, Integration test, Type checker, Manual visual review.",
+        "Review evidence: distinguish Diff inspection, Requirement trace, Independent check, Dependency verification.",
+        "Safe collaboration: distinguish Secret exclusion, Least privilege, Human authorization, Reversible checkpoint.",
+        "Failure recovery: distinguish Reproduce, Root-cause analysis, Rollback, Honest limitation."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Vibe Coding: primary documentation",
+          "url": "https://docs.github.com/en/copilot/responsible-use/agents"
+        }
+      ]
+    },
+    {
+      "id": "stage-02-llm-apis-lesson",
+      "stageId": "stage-02",
+      "topicId": "stage-02-llm-apis",
+      "title": "LLM APIs",
+      "summary": "Understand llm apis by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-02-llm-apis.1",
+        "stage-02-llm-apis.2",
+        "stage-02-llm-apis.3",
+        "stage-02-llm-apis.4",
+        "stage-02-llm-apis.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Request composition",
+          "conceptIds": [
+            "stage-02-llm-apis.1"
+          ],
+          "paragraphs": [
+            "Messages: Ordered role-labelled content supplies the conversational input.",
+            "Model identifier: Selects the documented model to handle a request.",
+            "Output limit: Caps allowed generated output according to the API contract.",
+            "System instruction: Supplies application-level behavior separately from ordinary user content."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Response interpretation",
+          "conceptIds": [
+            "stage-02-llm-apis.2"
+          ],
+          "paragraphs": [
+            "Content block: Contains a piece of response output and has a documented type.",
+            "Stop reason: Indicates why generation ended, such as a limit or a tool request.",
+            "Usage metadata: Reports measured token consumption for the request.",
+            "Request identifier: Correlates a specific API request with logs and provider support."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Error handling",
+          "conceptIds": [
+            "stage-02-llm-apis.3"
+          ],
+          "paragraphs": [
+            "Authentication error: Check credential validity and the documented authorization scheme.",
+            "Rate limit: Use bounded backoff and observe provider retry guidance.",
+            "Malformed request: Correct the payload rather than repeatedly sending the same invalid request.",
+            "Transient server failure: Retry only when the operation and retry policy permit it."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Streaming",
+          "conceptIds": [
+            "stage-02-llm-apis.4"
+          ],
+          "paragraphs": [
+            "Event parser: Interpret incremental events using their documented framing and types.",
+            "Cancellation: Stop an unwanted stream and release associated resources.",
+            "Final aggregate: Assemble complete content and metadata before treating partial output as final.",
+            "Backpressure: Prevent a slow consumer from accumulating unbounded buffered output."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Application boundaries",
+          "conceptIds": [
+            "stage-02-llm-apis.5"
+          ],
+          "paragraphs": [
+            "Backend credential: Keep provider secrets in a trusted server-side environment.",
+            "Timeout: Bound how long a call can wait before recovery.",
+            "Schema validation: Check response structure before using it in application logic.",
+            "Cost accounting: Track actual usage against a configured budget without assuming every request costs the same."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Request composition: a worked decision",
+          "scenario": "Preserve a user's question and prior assistant replies in the next request. What input is needed?",
+          "walkthrough": "Choose Messages. Ordered role-labelled content supplies the conversational input.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Response interpretation: a worked decision",
+          "scenario": "A response can contain text and tool-related structures. What should be inspected by type?",
+          "walkthrough": "Choose Content block. Contains a piece of response output and has a documented type.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Error handling: a worked decision",
+          "scenario": "A request is rejected because its credential is missing. Which error category fits?",
+          "walkthrough": "Choose Authentication error. Check credential validity and the documented authorization scheme.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Streaming: a worked decision",
+          "scenario": "Network chunks do not align with complete JSON events. What processing is required?",
+          "walkthrough": "Choose Event parser. Interpret incremental events using their documented framing and types.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Application boundaries: a worked decision",
+          "scenario": "A public browser bundle currently contains a provider secret. What placement is needed instead?",
+          "walkthrough": "Choose Backend credential. Keep provider secrets in a trusted server-side environment.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Request composition: distinguish Messages, Model identifier, Output limit, System instruction.",
+        "Response interpretation: distinguish Content block, Stop reason, Usage metadata, Request identifier.",
+        "Error handling: distinguish Authentication error, Rate limit, Malformed request, Transient server failure.",
+        "Streaming: distinguish Event parser, Cancellation, Final aggregate, Backpressure.",
+        "Application boundaries: distinguish Backend credential, Timeout, Schema validation, Cost accounting."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "LLM APIs: primary documentation",
+          "url": "https://platform.claude.com/docs/en/api/overview"
+        }
+      ]
+    },
+    {
+      "id": "stage-02-api-integration-lesson",
+      "stageId": "stage-02",
+      "topicId": "stage-02-api-integration",
+      "title": "API Integration",
+      "summary": "Understand api integration by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-02-api-integration.1",
+        "stage-02-api-integration.2",
+        "stage-02-api-integration.3",
+        "stage-02-api-integration.4",
+        "stage-02-api-integration.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "HTTP operations",
+          "conceptIds": [
+            "stage-02-api-integration.1"
+          ],
+          "paragraphs": [
+            "GET: Requests a resource representation and should not perform intended state changes.",
+            "POST: Submits data for processing and is not inherently idempotent.",
+            "PUT: Replaces a target resource and is defined as idempotent.",
+            "DELETE: Requests removal of a target resource and is defined as idempotent despite varying responses."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Status categories",
+          "conceptIds": [
+            "stage-02-api-integration.2"
+          ],
+          "paragraphs": [
+            "2xx: The HTTP operation was successfully handled, though application data still needs validation.",
+            "4xx: The client request cannot be fulfilled as sent.",
+            "5xx: The server failed to fulfill an apparently valid request.",
+            "3xx: Additional navigation or redirection behavior is indicated."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Identity and authority",
+          "conceptIds": [
+            "stage-02-api-integration.3"
+          ],
+          "paragraphs": [
+            "Authentication: Establishes who a caller is.",
+            "Authorization: Determines which actions that identity may perform.",
+            "TLS: Protects data in transit and authenticates the server when properly validated.",
+            "CORS: Controls browser access to responses across origins; it is not user authorization."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Retry correctness",
+          "conceptIds": [
+            "stage-02-api-integration.4"
+          ],
+          "paragraphs": [
+            "Idempotency key: Deduplicates a logical operation when the server supports that contract.",
+            "Backoff with jitter: Spreads bounded retries to reduce synchronized load.",
+            "Deadline: Limits the total time spent attempting an operation.",
+            "Payload repair: Changes invalid request data rather than retrying it unchanged."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Data contracts",
+          "conceptIds": [
+            "stage-02-api-integration.5"
+          ],
+          "paragraphs": [
+            "Input validation: Check the caller's data before using it.",
+            "Response validation: Check received data against the expected client contract.",
+            "Version compatibility: Handle API changes explicitly rather than assuming schemas stay identical.",
+            "Error recovery state: Show actionable failure without fabricating a success or clearing good data."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "HTTP operations: a worked decision",
+          "scenario": "Read an existing assessment result without changing it. Which HTTP method fits?",
+          "walkthrough": "Choose GET. Requests a resource representation and should not perform intended state changes.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Status categories: a worked decision",
+          "scenario": "Classify a successful 200 response. Which status family fits?",
+          "walkthrough": "Choose 2xx. The HTTP operation was successfully handled, though application data still needs validation.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Identity and authority: a worked decision",
+          "scenario": "Validate a caller's login token to establish identity. Which mechanism fits?",
+          "walkthrough": "Choose Authentication. Establishes who a caller is.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Retry correctness: a worked decision",
+          "scenario": "A timed-out payment POST may already have succeeded. What server-supported mechanism can deduplicate a retry?",
+          "walkthrough": "Choose Idempotency key. Deduplicates a logical operation when the server supports that contract.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Data contracts: a worked decision",
+          "scenario": "A scoring endpoint receives two answers for the same question. What check should reject this?",
+          "walkthrough": "Choose Input validation. Check the caller's data before using it.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "HTTP operations: distinguish GET, POST, PUT, DELETE.",
+        "Status categories: distinguish 2xx, 4xx, 5xx, 3xx.",
+        "Identity and authority: distinguish Authentication, Authorization, TLS, CORS.",
+        "Retry correctness: distinguish Idempotency key, Backoff with jitter, Deadline, Payload repair.",
+        "Data contracts: distinguish Input validation, Response validation, Version compatibility, Error recovery state."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "API Integration: primary documentation",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview"
+        }
+      ]
+    },
+    {
+      "id": "stage-02-function-calling-lesson",
+      "stageId": "stage-02",
+      "topicId": "stage-02-function-calling",
+      "title": "Function Calling",
+      "summary": "Understand function calling by comparing mechanisms and applying them to practical scenarios. Reading does not establish assessment mastery.",
+      "status": "published",
+      "conceptIds": [
+        "stage-02-function-calling.1",
+        "stage-02-function-calling.2",
+        "stage-02-function-calling.3",
+        "stage-02-function-calling.4",
+        "stage-02-function-calling.5"
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "title": "Tool lifecycle",
+          "conceptIds": [
+            "stage-02-function-calling.1"
+          ],
+          "paragraphs": [
+            "Tool definition: Describes a callable capability and its argument schema to the model.",
+            "Tool request: A model-produced name and arguments request an action; they do not execute it.",
+            "Application execution: Trusted application code validates and invokes the selected tool.",
+            "Tool result: Returns an observation linked to the originating request for the next model turn."
+          ]
+        },
+        {
+          "id": "section-2",
+          "title": "Argument checks",
+          "conceptIds": [
+            "stage-02-function-calling.2"
+          ],
+          "paragraphs": [
+            "Structural validation: Verify required fields, types and allowed fields.",
+            "Semantic validation: Check business constraints such as a positive amount or valid date range.",
+            "Authorization check: Ensure the caller is permitted to act on the referenced resource.",
+            "Allowlist lookup: Resolve tool names only against explicitly registered capabilities."
+          ]
+        },
+        {
+          "id": "section-3",
+          "title": "Side effects",
+          "conceptIds": [
+            "stage-02-function-calling.3"
+          ],
+          "paragraphs": [
+            "Read-only tool: Retrieves information without intended external state changes.",
+            "Confirmation gate: Obtains authorization for a consequential action before execution.",
+            "Idempotent execution: Deduplicates repeated logical actions using an explicit contract.",
+            "Audit record: Records action identity and outcome without exposing unnecessary secrets."
+          ]
+        },
+        {
+          "id": "section-4",
+          "title": "Result handling",
+          "conceptIds": [
+            "stage-02-function-calling.4"
+          ],
+          "paragraphs": [
+            "Call correlation: Associate each result with its originating tool-call identifier.",
+            "Failure result: Report tool failure explicitly rather than fabricating an observation.",
+            "Untrusted content: Treat returned documents as data rather than privileged instructions.",
+            "Bounded result: Limit returned volume so the next request stays within its context budget."
+          ]
+        },
+        {
+          "id": "section-5",
+          "title": "Loop control",
+          "conceptIds": [
+            "stage-02-function-calling.5"
+          ],
+          "paragraphs": [
+            "Iteration limit: Caps the number of model-tool rounds.",
+            "Time budget: Bounds total elapsed execution time.",
+            "Cost budget: Bounds accumulated usage or spend.",
+            "Final response: Ends the loop when no more tool action is required and supplies the user-facing answer."
+          ]
+        }
+      ],
+      "examples": [
+        {
+          "id": "example-1",
+          "title": "Tool lifecycle: a worked decision",
+          "scenario": "Advertise a weather lookup and required city argument. Which lifecycle artifact fits?",
+          "walkthrough": "Choose Tool definition. Describes a callable capability and its argument schema to the model.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-2",
+          "title": "Argument checks: a worked decision",
+          "scenario": "Reject arguments missing the required account ID. Which check fits?",
+          "walkthrough": "Choose Structural validation. Verify required fields, types and allowed fields.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-3",
+          "title": "Side effects: a worked decision",
+          "scenario": "Fetch a document for the model to summarize without modifying it. What tool category fits?",
+          "walkthrough": "Choose Read-only tool. Retrieves information without intended external state changes.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-4",
+          "title": "Result handling: a worked decision",
+          "scenario": "Two parallel tools return in reverse order. What mechanism keeps observations aligned?",
+          "walkthrough": "Choose Call correlation. Associate each result with its originating tool-call identifier.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        },
+        {
+          "id": "example-5",
+          "title": "Loop control: a worked decision",
+          "scenario": "The model repeatedly requests the same search without progressing. What count-based bound fits?",
+          "walkthrough": "Choose Iteration limit. Caps the number of model-tool rounds.",
+          "takeaway": "Choose the mechanism that matches the stated requirement; neighboring mechanisms solve different problems."
+        }
+      ],
+      "misconceptions": [
+        "Related mechanisms are interchangeable: choose by the actual requirement and contract.",
+        "A successful request or tool response proves the entire task is correct: verify the resulting behavior and evidence."
+      ],
+      "recap": [
+        "Tool lifecycle: distinguish Tool definition, Tool request, Application execution, Tool result.",
+        "Argument checks: distinguish Structural validation, Semantic validation, Authorization check, Allowlist lookup.",
+        "Side effects: distinguish Read-only tool, Confirmation gate, Idempotent execution, Audit record.",
+        "Result handling: distinguish Call correlation, Failure result, Untrusted content, Bounded result.",
+        "Loop control: distinguish Iteration limit, Time budget, Cost budget, Final response."
+      ],
+      "resources": [
+        {
+          "id": "primary-1",
+          "title": "Function Calling: primary documentation",
+          "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
+        }
+      ]
+    }
+  ]
+}
